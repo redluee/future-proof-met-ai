@@ -980,18 +980,53 @@ class MinorDB {
     }
 
     const officialPasses: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-    db.teacherAssessments.forEach((ta) => {
-      if (ta.assessment === "V" && ta.learningOutcome >= 1 && ta.learningOutcome <= 5) {
-        officialPasses[ta.learningOutcome]++;
-      }
-    });
-
     const projectedPasses: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-    db.selfEvaluations.forEach((se) => {
-      if (se.level === "V" && se.learningOutcome >= 1 && se.learningOutcome <= 5) {
-        projectedPasses[se.learningOutcome]++;
+
+    for (const ta of db.teacherAssessments) {
+      if (ta.assessment === "V" && ta.learningOutcome >= 1 && ta.learningOutcome <= 5) {
+        officialPasses[ta.learningOutcome] = (officialPasses[ta.learningOutcome] || 0) + 1;
       }
-    });
+    }
+
+    // Prognosis: Each sprint awards at most 1 'V' per learning outcome covered by stories or already officially passed.
+    for (const s of sprints) {
+      const sprintAssessments = db.teacherAssessments.filter((a) => a.sprintId === s.id);
+
+      if (s.status === "completed" || s.status === "archived") {
+        for (const a of sprintAssessments) {
+          if (a.assessment === "V" && a.learningOutcome >= 1 && a.learningOutcome <= 5) {
+            projectedPasses[a.learningOutcome] = (projectedPasses[a.learningOutcome] || 0) + 1;
+          }
+        }
+      } else {
+        // Active or planned sprint:
+        const officiallyPassedInSprint = new Set<number>();
+        for (const a of sprintAssessments) {
+          if (a.assessment === "V" && a.learningOutcome >= 1 && a.learningOutcome <= 5) {
+            projectedPasses[a.learningOutcome] = (projectedPasses[a.learningOutcome] || 0) + 1;
+            officiallyPassedInSprint.add(a.learningOutcome);
+          }
+        }
+
+        // Stories in sprint define targeted LUs (at most 1 projected V per covered LU for this sprint)
+        const sprintStories = db.stories.filter((st) => st.sprintId === s.id);
+        const coveredLUs = new Set<number>();
+        for (const st of sprintStories) {
+          (st.learningOutcomes || []).forEach((lu) => {
+            if (typeof lu === "number" && lu >= 1 && lu <= 5) {
+              coveredLUs.add(lu);
+            }
+          });
+        }
+
+        for (const lu of coveredLUs) {
+          const isAssessedO = sprintAssessments.some((a) => a.learningOutcome === lu && a.assessment === "O");
+          if (!officiallyPassedInSprint.has(lu) && !isAssessedO) {
+            projectedPasses[lu] = (projectedPasses[lu] || 0) + 1;
+          }
+        }
+      }
+    }
 
     let activeSprintWarnings = null;
     if (activeSprint) {
