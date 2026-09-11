@@ -184,15 +184,17 @@ export function MinorDashboardClient({ initialStats, initialSprints }: MinorDash
             <Layers className="size-3.5" />
             <span className="hidden sm:inline">{t("Alle sprints")}</span>
           </Link>
-          <Link
-            href="/export"
-            title={t("Exporteer Portfolio")}
-            aria-label={t("Exporteer Portfolio")}
-            className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold bg-brand text-zinc-950 hover:bg-brand-hover hover:shadow-[0_0_1.5rem_rgba(0,227,164,0.3)] transition-all cursor-pointer"
-          >
-            <Upload className="size-3.5" />
-            <span className="hidden sm:inline">{t("Exporteer Portfolio")}</span>
-          </Link>
+          {isAuthenticated && (
+            <Link
+              href="/export"
+              title={t("Exporteer Portfolio")}
+              aria-label={t("Exporteer Portfolio")}
+              className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold bg-brand text-zinc-950 hover:bg-brand-hover hover:shadow-[0_0_1.5rem_rgba(0,227,164,0.3)] transition-all cursor-pointer"
+            >
+              <Upload className="size-3.5" />
+              <span className="hidden sm:inline">{t("Exporteer Portfolio")}</span>
+            </Link>
+          )}
         </div>
       </div>
 

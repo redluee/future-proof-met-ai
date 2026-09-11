@@ -563,6 +563,7 @@ export function MinorStoriesClient({ initialStories, sprints }: MinorStoriesClie
                       storyTypes={storyTypes}
                       sprints={sprints}
                       isExpanded={expandedStoryIds.has(story.id)}
+                      isAuthenticated={isAuthenticated}
                       onView={() => setViewingStoryId(story.id)}
                       onToggleExpand={() => toggleExpand(story.id)}
                       onToggleCriterion={handleToggleCriterion}
@@ -583,6 +584,7 @@ export function MinorStoriesClient({ initialStories, sprints }: MinorStoriesClie
               storyTypes={storyTypes}
               sprints={sprints}
               isExpanded={expandedStoryIds.has(story.id)}
+              isAuthenticated={isAuthenticated}
               onView={() => setViewingStoryId(story.id)}
               onToggleExpand={() => toggleExpand(story.id)}
               onToggleCriterion={handleToggleCriterion}
@@ -1144,6 +1146,7 @@ interface StoryCardProps {
   storyTypes?: MinorStoryType[];
   sprints?: MinorSprint[];
   isExpanded: boolean;
+  isAuthenticated: boolean;
   onView: () => void;
   onToggleExpand: () => void;
   onToggleCriterion: (criterionId: number, isCompleted: boolean) => void;
@@ -1154,6 +1157,7 @@ function StoryCard({
   story,
   storyTypes = [],
   isExpanded,
+  isAuthenticated,
   onView,
   onToggleExpand,
   onToggleCriterion,
@@ -1217,22 +1221,36 @@ function StoryCard({
               ))}
             </div>
 
-            {/* Status Dropdown */}
-            <select
-              value={story.status}
-              onChange={(e) => onStatusChange(story.id, e.target.value as "todo" | "in_progress" | "done")}
-              className={`text-xs font-semibold uppercase px-2.5 py-1 rounded-lg border cursor-pointer ${
-                story.status === "done"
-                  ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
-                  : story.status === "in_progress"
-                  ? "bg-amber-500/10 border-amber-500/30 text-amber-400"
-                  : "bg-zinc-800 border-white/10 text-zinc-300"
-              }`}
-            >
-              <option value="todo">{t("To Do")}</option>
-              <option value="in_progress">{t("Bezig")}</option>
-              <option value="done">{t("Voltooid")}</option>
-            </select>
+            {/* Status Dropdown or Badge */}
+            {isAuthenticated ? (
+              <select
+                value={story.status}
+                onChange={(e) => onStatusChange(story.id, e.target.value as "todo" | "in_progress" | "done")}
+                className={`text-xs font-semibold uppercase px-2.5 py-1 rounded-lg border cursor-pointer ${
+                  story.status === "done"
+                    ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
+                    : story.status === "in_progress"
+                    ? "bg-amber-500/10 border-amber-500/30 text-amber-400"
+                    : "bg-zinc-800 border-white/10 text-zinc-300"
+                }`}
+              >
+                <option value="todo">{t("To Do")}</option>
+                <option value="in_progress">{t("Bezig")}</option>
+                <option value="done">{t("Voltooid")}</option>
+              </select>
+            ) : (
+              <span
+                className={`text-xs font-semibold uppercase px-2.5 py-1 rounded-lg border ${
+                  story.status === "done"
+                    ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
+                    : story.status === "in_progress"
+                    ? "bg-amber-500/10 border-amber-500/30 text-amber-400"
+                    : "bg-zinc-800 border-white/10 text-zinc-300"
+                }`}
+              >
+                {story.status === "done" ? t("Voltooid") : story.status === "in_progress" ? t("Bezig") : t("To Do")}
+              </span>
+            )}
           </div>
         </div>
 
@@ -1348,8 +1366,11 @@ function StoryCard({
                       >
                         <button
                           type="button"
-                          onClick={() => onToggleCriterion(c.id, !c.isCompleted)}
-                          className="mt-0.5 text-zinc-400 hover:text-brand cursor-pointer shrink-0"
+                          disabled={!isAuthenticated}
+                          onClick={() => {
+                            if (isAuthenticated) onToggleCriterion(c.id, !c.isCompleted);
+                          }}
+                          className={`mt-0.5 text-zinc-400 ${isAuthenticated ? "hover:text-brand cursor-pointer" : "cursor-default"} shrink-0`}
                         >
                           {c.isCompleted ? (
                             <CheckSquare className="size-4.5 text-emerald-400" />
@@ -1387,8 +1408,11 @@ function StoryCard({
                       >
                         <button
                           type="button"
-                          onClick={() => onToggleCriterion(c.id, !c.isCompleted)}
-                          className="mt-0.5 text-zinc-400 hover:text-brand cursor-pointer shrink-0"
+                          disabled={!isAuthenticated}
+                          onClick={() => {
+                            if (isAuthenticated) onToggleCriterion(c.id, !c.isCompleted);
+                          }}
+                          className={`mt-0.5 text-zinc-400 ${isAuthenticated ? "hover:text-brand cursor-pointer" : "cursor-default"} shrink-0`}
                         >
                           {c.isCompleted ? (
                             <CheckSquare className="size-4.5 text-emerald-400" />

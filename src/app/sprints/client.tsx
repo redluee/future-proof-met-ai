@@ -303,23 +303,25 @@ export function MinorSprintsClient({ initialSprints }: MinorSprintsClientProps) 
                     <span>{t("Presentatie")}</span>
                   </Link>
 
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      handleExportSprint(s);
-                    }}
-                    className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all cursor-pointer"
-                    title={copiedSprintId === s.id ? t("Gekopieerd naar klembord!") : t("Sprint kopiëren naar klembord")}
-                    aria-label={t("Sprint kopiëren naar klembord")}
-                  >
-                    {copiedSprintId === s.id ? (
-                      <Check className="size-4 text-brand" />
-                    ) : (
-                      <Copy className="size-4" />
-                    )}
-                  </button>
+                  {isAuthenticated && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleExportSprint(s);
+                      }}
+                      className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all cursor-pointer"
+                      title={copiedSprintId === s.id ? t("Gekopieerd naar klembord!") : t("Sprint kopiëren naar klembord")}
+                      aria-label={t("Sprint kopiëren naar klembord")}
+                    >
+                      {copiedSprintId === s.id ? (
+                        <Check className="size-4 text-brand" />
+                      ) : (
+                        <Copy className="size-4" />
+                      )}
+                    </button>
+                  )}
                   {isAuthenticated && (
                     <button
                       type="button"

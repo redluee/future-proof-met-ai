@@ -813,37 +813,41 @@ export function MinorSprintDetailClient({ initialSprint, initialStoryTypes }: Mi
             <Presentation className="size-3.5" />
             <span>{t("Presentatie")}</span>
           </button>
-          <button
-            onClick={() => handleTriggerExport("pdf")}
-            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 transition-all cursor-pointer shrink-0"
-            title={t("Exporteer deze sprint als PDF")}
-            aria-label="PDF"
-          >
-            <FileText className="size-3.5 text-brand" />
-            <span>PDF</span>
-          </button>
-          <button
-            onClick={() => handleTriggerExport("excel")}
-            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 transition-all cursor-pointer shrink-0"
-            title={t("Exporteer deze sprint als Excel")}
-            aria-label="Excel"
-          >
-            <FileSpreadsheet className="size-3.5 text-emerald-400" />
-            <span>Excel</span>
-          </button>
-          <button
-            type="button"
-            onClick={handleExportSprintJson}
-            className="p-2 rounded-lg text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-white/10 transition-all cursor-pointer flex items-center justify-center shrink-0"
-            title={copiedSprintExport ? t("Gekopieerd naar klembord!") : t("Sprint kopiëren naar klembord")}
-            aria-label={t("Sprint kopiëren naar klembord")}
-          >
-            {copiedSprintExport ? (
-              <Check className="size-3.5 text-brand" />
-            ) : (
-              <Copy className="size-3.5" />
-            )}
-          </button>
+          {isAuthenticated && (
+            <>
+              <button
+                onClick={() => handleTriggerExport("pdf")}
+                className="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 transition-all cursor-pointer shrink-0"
+                title={t("Exporteer deze sprint als PDF")}
+                aria-label="PDF"
+              >
+                <FileText className="size-3.5 text-brand" />
+                <span>PDF</span>
+              </button>
+              <button
+                onClick={() => handleTriggerExport("excel")}
+                className="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 transition-all cursor-pointer shrink-0"
+                title={t("Exporteer deze sprint als Excel")}
+                aria-label="Excel"
+              >
+                <FileSpreadsheet className="size-3.5 text-emerald-400" />
+                <span>Excel</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleExportSprintJson}
+                className="p-2 rounded-lg text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-white/10 transition-all cursor-pointer flex items-center justify-center shrink-0"
+                title={copiedSprintExport ? t("Gekopieerd naar klembord!") : t("Sprint kopiëren naar klembord")}
+                aria-label={t("Sprint kopiëren naar klembord")}
+              >
+                {copiedSprintExport ? (
+                  <Check className="size-3.5 text-brand" />
+                ) : (
+                  <Copy className="size-3.5" />
+                )}
+              </button>
+            </>
+          )}
         </div>
       </div>
 
