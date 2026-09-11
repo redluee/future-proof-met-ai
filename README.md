@@ -9,12 +9,16 @@ Gehost via Vercel op [minor.stevenheijn.nl](https://minor.stevenheijn.nl).
 - **Adminmodus**: Beheerder logt in via `/login` met `Steven` en krijgt alle bewerk-, toevoeg- en verwijdermogelijkheden zoals in de originele applicatie.
 - **Zelfvoorzienend**: Bevat alle initiële data in `data/minor-data.json` en heeft geen externe SQL server of database account nodig voor deployments.
 
-## Vercel Deployment
+## 🚀 Deployment (Vercel)
 
-1. Koppel deze repository aan een nieuw Vercel project.
-2. Configureer het domein `minor.stevenheijn.nl` in Vercel Project Settings > Domains.
-3. (Optioneel) Stel `SESSION_SECRET` in bij Environment Variables (automatische fallback is ingebouwd).
-4. (Optioneel) Stel `GITHUB_TOKEN` en `GITHUB_REPO` in als je wijzigingen gemaakt in productie op Vercel direct wilt laten committen naar je repository.
+1. Koppel deze repository (`redluee/future-proof-met-ai`) aan Vercel.
+2. Framework Preset: **Next.js**.
+3. Voeg eventueel de optionele environment variables toe:
+   - `AUTH_USERNAME`: default `Steven`
+   - `AUTH_PASSWORD`: default `Duimpie2.0`
+   - `AUTH_SECRET`: willekeurige string voor de sessie cookie
+4. Koppel in Vercel het custom domein: `minor.stevenheijn.nl`.
+5. Klaar! Zowel publieke bezoekers als beheerder werken out-of-the-box.
 
 ## Lokaal draaien
 
