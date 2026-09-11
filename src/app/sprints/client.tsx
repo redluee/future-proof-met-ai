@@ -292,16 +292,18 @@ export function MinorSprintsClient({ initialSprints }: MinorSprintsClientProps) 
                 </div>
 
                 <div className="flex items-center gap-1.5 sm:gap-2 ml-auto sm:ml-0 shrink-0">
-                  <Link
-                    href={`/sprints/${s.id}/present`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-brand/10 text-brand border border-brand/20 hover:bg-brand hover:text-zinc-950 transition-all cursor-pointer"
-                    title={t("Start Show & Tell presentatie")}
-                    aria-label={t("Presentatie")}
-                  >
-                    <Presentation className="size-3.5" />
-                    <span>{t("Presentatie")}</span>
-                  </Link>
+                  {isAuthenticated && (
+                    <Link
+                      href={`/sprints/${s.id}/present`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-brand/10 text-brand border border-brand/20 hover:bg-brand hover:text-zinc-950 transition-all cursor-pointer"
+                      title={t("Start Show & Tell presentatie")}
+                      aria-label={t("Presentatie")}
+                    >
+                      <Presentation className="size-3.5" />
+                      <span>{t("Presentatie")}</span>
+                    </Link>
+                  )}
 
                   {isAuthenticated && (
                     <button

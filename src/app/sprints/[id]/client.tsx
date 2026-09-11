@@ -90,6 +90,12 @@ export function MinorSprintDetailClient({ initialSprint, initialStoryTypes }: Mi
   });
   const [editingPresentationStory, setEditingPresentationStory] = useState<MinorStory | null>(null);
 
+  useEffect(() => {
+    if (!isAuthenticated && isPresentationOpen) {
+      setIsPresentationOpen(false);
+    }
+  }, [isAuthenticated, isPresentationOpen]);
+
   // Story Modal Presentation Fields
   const [presEnabled, setPresEnabled] = useState(true);
   const [presLayout, setPresLayout] = useState<"auto" | "split" | "media" | "bullets" | "demo">("auto");
@@ -803,16 +809,18 @@ export function MinorSprintDetailClient({ initialSprint, initialStoryTypes }: Mi
 
         {/* Export & Presentation Toolbar */}
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap sm:flex-nowrap">
-          <button
-            type="button"
-            onClick={() => setIsPresentationOpen(true)}
-            className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold bg-brand text-zinc-950 hover:bg-brand-hover hover:shadow-[0_0_1.5rem_rgba(0,227,164,0.3)] transition-all cursor-pointer shrink-0"
-            title={t("Start Show & Tell presentatie")}
-            aria-label={t("Presentatie")}
-          >
-            <Presentation className="size-3.5" />
-            <span>{t("Presentatie")}</span>
-          </button>
+          {isAuthenticated && (
+            <button
+              type="button"
+              onClick={() => setIsPresentationOpen(true)}
+              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold bg-brand text-zinc-950 hover:bg-brand-hover hover:shadow-[0_0_1.5rem_rgba(0,227,164,0.3)] transition-all cursor-pointer shrink-0"
+              title={t("Start Show & Tell presentatie")}
+              aria-label={t("Presentatie")}
+            >
+              <Presentation className="size-3.5" />
+              <span>{t("Presentatie")}</span>
+            </button>
+          )}
           {isAuthenticated && (
             <>
               <button
@@ -3019,7 +3027,7 @@ export function MinorSprintDetailClient({ initialSprint, initialStoryTypes }: Mi
       )}
 
       {/* Presentation Fullscreen Mode */}
-      {isPresentationOpen && (
+      {isAuthenticated && isPresentationOpen && (
         <SprintPresentation
           sprint={sprint}
           storyTypes={storyTypes}
@@ -3034,7 +3042,7 @@ export function MinorSprintDetailClient({ initialSprint, initialStoryTypes }: Mi
       )}
 
       {/* Story Presentation Editor Modal */}
-      {editingPresentationStory && (
+      {isAuthenticated && editingPresentationStory && (
         <PresentationStoryEditor
           story={editingPresentationStory}
           onSave={async (data) => {

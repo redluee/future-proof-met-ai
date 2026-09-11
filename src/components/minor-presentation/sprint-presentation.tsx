@@ -23,6 +23,7 @@ import { PresentationStoryEditor } from "./presentation-story-editor";
 import { PresentationCriteriaModal } from "./presentation-criteria-modal";
 import { getStoryTypeDetails } from "@/components/minor-story-type-badge";
 import { api } from "@/lib/api";
+import { useAuth } from "@/components/auth-context";
 
 interface SprintPresentationProps {
   sprint: MinorSprintFull;
@@ -123,6 +124,7 @@ export function SprintPresentation({
   onStoryUpdated,
 }: SprintPresentationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isAuthenticated } = useAuth();
 
   // Filter stories included in presentation (default true unless explicitly false)
   const presentedStories = useMemo(() => {
@@ -508,7 +510,7 @@ export function SprintPresentation({
       </div>
 
       {/* Presenter Notes Bar (Collapsible Peek) */}
-      {showNotes && currentStory?.presentationData?.notes && (
+      {isAuthenticated && showNotes && currentStory?.presentationData?.notes && (
         <div className="relative z-20 mx-auto mb-2 max-w-3xl w-full px-4">
           <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs backdrop-blur-md flex items-start gap-2.5 shadow-xl">
             <StickyNote className="size-4 shrink-0 mt-0.5 text-amber-400" />
@@ -590,7 +592,7 @@ export function SprintPresentation({
           )}
 
           {/* Edit Presentation Content for this story */}
-          {currentStory && (
+          {isAuthenticated && currentStory && (
             <button
               type="button"
               onClick={() => setEditingStory(currentStory)}
@@ -602,7 +604,7 @@ export function SprintPresentation({
           )}
 
           {/* Presenter Notes toggle (if notes exist) */}
-          {currentStory?.presentationData?.notes && (
+          {isAuthenticated && currentStory?.presentationData?.notes && (
             <button
               type="button"
               onClick={() => setShowNotes((prev) => !prev)}
@@ -747,7 +749,7 @@ export function SprintPresentation({
       )}
 
       {/* Story Presentation Editor Modal */}
-      {editingStory && (
+      {isAuthenticated && editingStory && (
         <PresentationStoryEditor
           story={editingStory}
           onSave={handleSaveStoryPresentation}
