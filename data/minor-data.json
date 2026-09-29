@@ -15,21 +15,6 @@
       "status": "active",
       "createdAt": "2026-09-01 22:37:23",
       "updatedAt": "2026-09-02 07:56:14"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "sprintNumber": "3",
-      "name": "Sprint 3",
-      "startDate": "2026-10-07",
-      "endDate": "2026-10-27",
-      "durationDays": 14,
-      "showAndGrowDate": "2026-10-21",
-      "extendedDays": 0,
-      "extensionReason": null,
-      "status": "planned",
-      "createdAt": "2026-09-29T22:39:59.629Z",
-      "updatedAt": "2026-09-29T22:39:59.629Z"
     }
   ],
   "stories": [
@@ -122,24 +107,6 @@
       "orderIndex": 0,
       "createdAt": "2026-09-02 14:18:28",
       "presentationData": null
-    },
-    {
-      "id": 6,
-      "sprintId": 2,
-      "userId": 1,
-      "storyTypeCode": "US",
-      "storyNumber": "US 3.0",
-      "title": "AI agents basics",
-      "asA": "software ontwikkelaar",
-      "iWant": "agents creeren voor specifieke taken",
-      "soThat": "deze",
-      "learningOutcomes": [
-        4
-      ],
-      "status": "todo",
-      "orderIndex": 3,
-      "presentationData": null,
-      "createdAt": "2026-09-29T22:39:59.633Z"
     }
   ],
   "criteria": [
@@ -367,60 +334,6 @@
       "text": "Er is client- en server-side invoervalidatie met duidelijke Nederlandstalige feedback",
       "isCompleted": true,
       "indent": 0
-    },
-    {
-      "id": 81,
-      "storyId": 6,
-      "type": "acceptance",
-      "orderIndex": 1,
-      "indent": 0,
-      "text": "Er zijn minimaal 3 agents gerealiseerd",
-      "isCompleted": false
-    },
-    {
-      "id": 82,
-      "storyId": 6,
-      "type": "acceptance",
-      "orderIndex": 2,
-      "indent": 0,
-      "text": "Elke agent heeft zijn eigen trigger",
-      "isCompleted": false
-    },
-    {
-      "id": 83,
-      "storyId": 6,
-      "type": "acceptance",
-      "orderIndex": 3,
-      "indent": 0,
-      "text": "Elke agent kan nieuwe issues aanmaken",
-      "isCompleted": false
-    },
-    {
-      "id": 84,
-      "storyId": 6,
-      "type": "quality",
-      "orderIndex": 1,
-      "indent": 0,
-      "text": "Definition of Done gehaald",
-      "isCompleted": false
-    },
-    {
-      "id": 85,
-      "storyId": 6,
-      "type": "quality",
-      "orderIndex": 2,
-      "indent": 0,
-      "text": "Getest volgens acceptatiecriteria",
-      "isCompleted": false
-    },
-    {
-      "id": 86,
-      "storyId": 6,
-      "type": "quality",
-      "orderIndex": 3,
-      "indent": 0,
-      "text": "Code en documentatie gedocumenteerd met bewijslast",
-      "isCompleted": false
     }
   ],
   "evidence": [
@@ -481,46 +394,6 @@
       "level": "-",
       "argumentation": "",
       "updatedAt": "2026-09-01 22:37:23"
-    },
-    {
-      "id": 6,
-      "sprintId": 2,
-      "learningOutcome": 1,
-      "level": "-",
-      "argumentation": null,
-      "updatedAt": "2026-09-29T22:39:59.636Z"
-    },
-    {
-      "id": 7,
-      "sprintId": 2,
-      "learningOutcome": 2,
-      "level": "-",
-      "argumentation": null,
-      "updatedAt": "2026-09-29T22:39:59.636Z"
-    },
-    {
-      "id": 8,
-      "sprintId": 2,
-      "learningOutcome": 3,
-      "level": "-",
-      "argumentation": null,
-      "updatedAt": "2026-09-29T22:39:59.636Z"
-    },
-    {
-      "id": 9,
-      "sprintId": 2,
-      "learningOutcome": 4,
-      "level": "-",
-      "argumentation": null,
-      "updatedAt": "2026-09-29T22:39:59.636Z"
-    },
-    {
-      "id": 10,
-      "sprintId": 2,
-      "learningOutcome": 5,
-      "level": "-",
-      "argumentation": null,
-      "updatedAt": "2026-09-29T22:39:59.636Z"
     }
   ],
   "teacherAssessments": [
@@ -563,46 +436,6 @@
       "assessment": "-",
       "notes": "",
       "evaluatedAt": null
-    },
-    {
-      "id": 6,
-      "sprintId": 2,
-      "learningOutcome": 1,
-      "assessment": "-",
-      "notes": null,
-      "evaluatedAt": "2026-09-29T22:39:59.646Z"
-    },
-    {
-      "id": 7,
-      "sprintId": 2,
-      "learningOutcome": 2,
-      "assessment": "-",
-      "notes": null,
-      "evaluatedAt": "2026-09-29T22:39:59.646Z"
-    },
-    {
-      "id": 8,
-      "sprintId": 2,
-      "learningOutcome": 3,
-      "assessment": "-",
-      "notes": null,
-      "evaluatedAt": "2026-09-29T22:39:59.646Z"
-    },
-    {
-      "id": 9,
-      "sprintId": 2,
-      "learningOutcome": 4,
-      "assessment": "-",
-      "notes": null,
-      "evaluatedAt": "2026-09-29T22:39:59.646Z"
-    },
-    {
-      "id": 10,
-      "sprintId": 2,
-      "learningOutcome": 5,
-      "assessment": "-",
-      "notes": null,
-      "evaluatedAt": "2026-09-29T22:39:59.646Z"
     }
   ],
   "feedbackEntries": [],
@@ -616,16 +449,6 @@
       "whatChange": "",
       "createdAt": "2026-09-01 22:37:23",
       "updatedAt": "2026-09-01 22:37:23"
-    },
-    {
-      "id": 2,
-      "sprintId": 2,
-      "date": "2026-09-23",
-      "whatLearned": null,
-      "whatRetained": null,
-      "whatChange": null,
-      "createdAt": "2026-09-29T22:39:59.629Z",
-      "updatedAt": "2026-09-29T22:39:59.648Z"
     }
   ],
   "peerHelp": [],
