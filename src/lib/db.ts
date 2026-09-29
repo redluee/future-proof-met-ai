@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { after } from "next/server";
 import type {
   MinorSprint,
   MinorSprintFull,
@@ -95,9 +96,47 @@ function addDays(date: Date, days: number): Date {
 class MinorDB {
   private data: MinorDatabaseData | null = null;
   private filePath: string;
+  private hydratePromise: Promise<void> | null = null;
 
   constructor() {
     this.filePath = path.join(process.cwd(), "data", "minor-data.json");
+  }
+
+  /**
+   * Loads the latest committed data from GitHub (when configured) so a fresh
+   * serverless instance doesn't start from the read-only snapshot baked into
+   * the deployment bundle. Called once per cold start from instrumentation.ts.
+   * Safe to call multiple times; only the first call does any work.
+   */
+  hydrate(): Promise<void> {
+    if (this.data) return Promise.resolve();
+    if (!this.hydratePromise) {
+      this.hydratePromise = this.hydrateFromGitHub();
+    }
+    return this.hydratePromise;
+  }
+
+  private async hydrateFromGitHub(): Promise<void> {
+    const token = process.env.GITHUB_TOKEN;
+    const repo = process.env.GITHUB_REPO;
+    if (!token || !repo) return;
+
+    try {
+      const url = `https://api.github.com/repos/${repo}/contents/data/minor-data.json`;
+      const res = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/vnd.github+json",
+        },
+        cache: "no-store",
+      });
+      if (!res.ok) return;
+      const fileInfo = await res.json();
+      const content = Buffer.from(fileInfo.content, "base64").toString("utf-8");
+      this.data = JSON.parse(content);
+    } catch (err) {
+      console.warn("Could not hydrate database from GitHub, falling back to local file:", err);
+    }
   }
 
   private getData(): MinorDatabaseData {
@@ -146,8 +185,18 @@ class MinorDB {
       }
     }
 
-    // Optional GitHub commit sync if environment variables are configured
-    this.syncToGitHub().catch(() => {});
+    // Optional GitHub commit sync if environment variables are configured.
+    // Uses `after()` so the commit finishes even though we don't await it here -
+    // otherwise Vercel can freeze the function right after the response is sent
+    // and the write never lands, so the next cold instance serves stale data.
+    const syncPromise = this.syncToGitHub().catch((err) => {
+      console.warn("GitHub sync error:", err);
+    });
+    try {
+      after(syncPromise);
+    } catch {
+      // Not inside a request context (e.g. a script) - best effort only.
+    }
   }
 
   private async syncToGitHub() {
@@ -162,6 +211,7 @@ class MinorDB {
           Authorization: `Bearer ${token}`,
           Accept: "application/vnd.github+json",
         },
+        cache: "no-store",
       });
       let sha: string | undefined;
       if (getRes.ok) {
