@@ -16,6 +16,9 @@ import type {
   MinorSprintExportData,
   MinorSprintExportStory,
   MinorStoryPresentationData,
+  MinorStoryPresentationDocument,
+  MinorStoryPresentationLink,
+  MinorStoryPresentationImage,
 } from "@/types/minor";
 
 export type {
@@ -36,6 +39,9 @@ export type {
   MinorSprintExportData,
   MinorSprintExportStory,
   MinorStoryPresentationData,
+  MinorStoryPresentationDocument,
+  MinorStoryPresentationLink,
+  MinorStoryPresentationImage,
 };
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
