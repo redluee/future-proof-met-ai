@@ -15,6 +15,21 @@
       "status": "active",
       "createdAt": "2026-09-01 22:37:23",
       "updatedAt": "2026-09-02 07:56:14"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "sprintNumber": "2",
+      "name": "Sprint 2",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-30",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-09-30",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "active",
+      "createdAt": "2026-09-29T22:41:48.800Z",
+      "updatedAt": "2026-09-29T22:41:48.800Z"
     }
   ],
   "stories": [
@@ -107,6 +122,126 @@
       "orderIndex": 0,
       "createdAt": "2026-09-02 14:18:28",
       "presentationData": null
+    },
+    {
+      "id": 6,
+      "sprintId": 2,
+      "userId": 1,
+      "storyTypeCode": "LS",
+      "storyNumber": "LS 2.0",
+      "title": "Claude code",
+      "asA": "student ai",
+      "iWant": "claude code kunnen gebruiken",
+      "soThat": "efficiënt met de beste modellen leer te werken",
+      "learningOutcomes": [
+        4
+      ],
+      "status": "done",
+      "orderIndex": 1,
+      "presentationData": {
+        "enabled": true,
+        "layout": "auto",
+        "listStyle": "bullets",
+        "bullets": [
+          "Moeilijk te sturen",
+          "/ commands",
+          "claude.md",
+          "skills",
+          "agents"
+        ],
+        "websites": [],
+        "links": [],
+        "documents": [],
+        "images": []
+      },
+      "createdAt": "2026-09-29T22:41:48.811Z"
+    },
+    {
+      "id": 7,
+      "sprintId": 2,
+      "userId": 1,
+      "storyTypeCode": "US",
+      "storyNumber": "US 2.0",
+      "title": "Tandlab CMS",
+      "asA": "administratief medewerker van Tandlab",
+      "iWant": "op een toegankelijke manier de content op de website kunnen aanpassen",
+      "soThat": "de website altijd up to date blijft",
+      "learningOutcomes": [
+        2,
+        4,
+        5
+      ],
+      "status": "done",
+      "orderIndex": 2,
+      "presentationData": {
+        "enabled": true,
+        "layout": "auto",
+        "listStyle": "steps",
+        "bullets": [
+          "Requirements brainstormen met claude",
+          "Requirements aan claude code geven",
+          "Finetunen van de website en CMS"
+        ],
+        "websites": [
+          {
+            "title": "Tandlab CMS",
+            "url": "tandlab.stevenheijn.nl"
+          }
+        ],
+        "links": [
+          {
+            "title": "Tandlab CMS",
+            "url": "tandlab.stevenheijn.nl"
+          }
+        ],
+        "demoUrl": "tandlab.stevenheijn.nl",
+        "demoTitle": "Tandlab CMS",
+        "documents": [],
+        "images": []
+      },
+      "createdAt": "2026-09-29T22:41:48.813Z"
+    },
+    {
+      "id": 8,
+      "sprintId": 2,
+      "userId": 1,
+      "storyTypeCode": "RS",
+      "storyNumber": "US 3.0",
+      "title": "Lokaal llm draaien",
+      "asA": "data eigenaar",
+      "iWant": "onderzoeken welke taalmodellen ik lokaal kan draaien",
+      "soThat": "gevoelige data bij mijzelf blijft",
+      "learningOutcomes": [
+        3,
+        4
+      ],
+      "status": "done",
+      "orderIndex": 3,
+      "presentationData": {
+        "enabled": true,
+        "layout": "auto",
+        "listStyle": "bullets",
+        "bullets": [
+          "LLM grootte, parameters",
+          "Preciezere instructies voor een bruikbaar resultaat",
+          "Quantisation (bit depth)"
+        ],
+        "websites": [],
+        "links": [],
+        "documents": [
+          {
+            "title": "Evaluatiekader voor Lokale Taalmodellen",
+            "url": "/api/uploads/minor_165e535b-eea3-4007-8462-34cc03de9478.pdf"
+          }
+        ],
+        "images": [
+          {
+            "url": "/api/uploads/minor_c92691b1-3b8a-4613-8bde-a83fb5889cfa.jpg",
+            "caption": "lokaal llm draaien"
+          }
+        ]
+      },
+      "createdAt": "2026-09-29T22:41:48.815Z"
     }
   ],
   "criteria": [
@@ -334,6 +469,168 @@
       "text": "Er is client- en server-side invoervalidatie met duidelijke Nederlandstalige feedback",
       "isCompleted": true,
       "indent": 0
+    },
+    {
+      "id": 81,
+      "storyId": 6,
+      "type": "acceptance",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "Claude code geïnstalleerd",
+      "isCompleted": true
+    },
+    {
+      "id": 82,
+      "storyId": 6,
+      "type": "acceptance",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Skill geïnstalleerd en gebruikt",
+      "isCompleted": true
+    },
+    {
+      "id": 83,
+      "storyId": 6,
+      "type": "acceptance",
+      "orderIndex": 3,
+      "indent": 0,
+      "text": "Minimaal 2 agents ontworpen",
+      "isCompleted": true
+    },
+    {
+      "id": 84,
+      "storyId": 6,
+      "type": "acceptance",
+      "orderIndex": 4,
+      "indent": 0,
+      "text": "Claude.md bestand gemaakt",
+      "isCompleted": true
+    },
+    {
+      "id": 85,
+      "storyId": 6,
+      "type": "quality",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "CLAUDE.md bevat heldere, gestructureerde projectinstructies en conventies",
+      "isCompleted": true
+    },
+    {
+      "id": 86,
+      "storyId": 6,
+      "type": "quality",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Agents hebben afgebakende rollen en effectieve systeem-prompts",
+      "isCompleted": true
+    },
+    {
+      "id": 87,
+      "storyId": 6,
+      "type": "quality",
+      "orderIndex": 3,
+      "indent": 0,
+      "text": "Prompts en skills zijn doeltreffend en herbruikbaar opgesteld",
+      "isCompleted": true
+    },
+    {
+      "id": 88,
+      "storyId": 6,
+      "type": "quality",
+      "orderIndex": 4,
+      "indent": 0,
+      "text": "Context en tools worden efficiënt ingezet voor nauwkeurige resultaten",
+      "isCompleted": true
+    },
+    {
+      "id": 89,
+      "storyId": 7,
+      "type": "acceptance",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "De administrator kan gemakkelijk inloggen via een aparte link om in te loggen in het systeem",
+      "isCompleted": true
+    },
+    {
+      "id": 90,
+      "storyId": 7,
+      "type": "acceptance",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Content op de website is makkelijk inzichtelijk gemaakt zodat de administrator dit kan aanpassen",
+      "isCompleted": true
+    },
+    {
+      "id": 91,
+      "storyId": 7,
+      "type": "acceptance",
+      "orderIndex": 3,
+      "indent": 0,
+      "text": "Het project is geschreven in PHP",
+      "isCompleted": true
+    },
+    {
+      "id": 92,
+      "storyId": 7,
+      "type": "quality",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "Er zijn tests om de functionaliteit van de code te behouden",
+      "isCompleted": true
+    },
+    {
+      "id": 93,
+      "storyId": 7,
+      "type": "quality",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Er wordt linting gebruikt om de kwaliteit en structuur van de code te behouden.",
+      "isCompleted": true
+    },
+    {
+      "id": 94,
+      "storyId": 7,
+      "type": "quality",
+      "orderIndex": 3,
+      "indent": 0,
+      "text": "Code en documentatie gedocumenteerd met bewijslast",
+      "isCompleted": true
+    },
+    {
+      "id": 95,
+      "storyId": 8,
+      "type": "acceptance",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "Korte notitie die de privacyrisico's van servers vergelijkt met lokaal draaien.",
+      "isCompleted": true
+    },
+    {
+      "id": 96,
+      "storyId": 8,
+      "type": "acceptance",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Concreet advies over wanneer lokaal draaien nodig is.",
+      "isCompleted": true
+    },
+    {
+      "id": 97,
+      "storyId": 8,
+      "type": "quality",
+      "orderIndex": 1,
+      "indent": 0,
+      "text": "Data-opslag en dataminimalisatie zijn correct meegewogen",
+      "isCompleted": true
+    },
+    {
+      "id": 98,
+      "storyId": 8,
+      "type": "quality",
+      "orderIndex": 2,
+      "indent": 0,
+      "text": "Open-source licentie van het Hugging Face-model is gecontroleerd voor het project",
+      "isCompleted": true
     }
   ],
   "evidence": [
@@ -352,6 +649,30 @@
       "title": "S-Base",
       "url": "https://github.com/redluee/S-Base.git",
       "createdAt": "2026-09-08 08:34:28"
+    },
+    {
+      "id": 6,
+      "storyId": 6,
+      "type": "github",
+      "title": "ontworpen agents",
+      "url": "https://github.com/redluee/tandlab-cms/tree/main/.claude/agents",
+      "createdAt": "2026-09-29T22:41:48.811Z"
+    },
+    {
+      "id": 7,
+      "storyId": 7,
+      "type": "github",
+      "title": "tandlab-cms",
+      "url": "https://github.com/redluee/tandlab-cms.git",
+      "createdAt": "2026-09-29T22:41:48.814Z"
+    },
+    {
+      "id": 8,
+      "storyId": 8,
+      "type": "document",
+      "title": "Evaluatiekader voor Lokale Taalmodellen.pdf",
+      "url": "/api/uploads/minor_6c187b84-0b98-4801-9594-26e5af29e750.pdf",
+      "createdAt": "2026-09-29T22:41:48.815Z"
     }
   ],
   "selfEvaluations": [
@@ -394,6 +715,46 @@
       "level": "-",
       "argumentation": "",
       "updatedAt": "2026-09-01 22:37:23"
+    },
+    {
+      "id": 6,
+      "sprintId": 2,
+      "learningOutcome": 1,
+      "level": "-",
+      "argumentation": null,
+      "updatedAt": "2026-09-29T22:41:48.818Z"
+    },
+    {
+      "id": 7,
+      "sprintId": 2,
+      "learningOutcome": 2,
+      "level": "V",
+      "argumentation": "Voor de klant Tandlab heb ik een custom cms met claude ontwikkeld in PHP. Ze kunnen gemakkelijk tekst en afbeeldingen veranderen op de website en onderdelen toevoegen zoals medewerkers. De klant is tevreden en heeft toegezegd om dit vrijdag 02/10/2026 over te zetten.\n- Bewijs (github): tandlab-cms (https://github.com/redluee/tandlab-cms.git)",
+      "updatedAt": "2026-09-29T22:41:48.818Z"
+    },
+    {
+      "id": 8,
+      "sprintId": 2,
+      "learningOutcome": 3,
+      "level": "V",
+      "argumentation": "Ik heb een verslag geschreven waarin ik beschrijf wat de afwegingen zijn voor lokale llm's. Omdat veel bedrijven vaak gevoelige data zoals klantgegevens hebben kunnen ze deze niet zomaar met llm's meegeven, dit is niet conform AVG regelgeving. Het verslag geeft advies welk model gebruikt kan worden wanneer bepaalde taken verwacht worden van een llm.",
+      "updatedAt": "2026-09-29T22:41:48.818Z"
+    },
+    {
+      "id": 9,
+      "sprintId": 2,
+      "learningOutcome": 4,
+      "level": "V",
+      "argumentation": "Ik heb deze sprint gebruik gemaakt van Claude code. Om deze tool onder de knie te krijgen heb ik een aantal ingebouwde commando's leren gebruiken, daarnaast heb ik in het tandlab-cms project een claude.md bestand toegevoegd, ook heb ik skills toegevoegd en heb ik agents gemaakt.\n- Bewijs (github): ontworpen agents (https://github.com/redluee/tandlab-cms/tree/main/.claude/agents)",
+      "updatedAt": "2026-09-29T22:41:48.818Z"
+    },
+    {
+      "id": 10,
+      "sprintId": 2,
+      "learningOutcome": 5,
+      "level": "V",
+      "argumentation": "Ik heb zelfstandig een klant gevonden die zelf de website wil kunnen beheren dus heb ik deze oplossing ontwikkeld. Ik ben zelfstandig aan de slag gegaan met Claude code en verschillende technieken toegepast om deze tool onder de knie te krijgen.\n- Bewijs (github): tandlab-cms (https://github.com/redluee/tandlab-cms.git)",
+      "updatedAt": "2026-09-29T22:41:48.818Z"
     }
   ],
   "teacherAssessments": [
@@ -436,9 +797,60 @@
       "assessment": "-",
       "notes": "",
       "evaluatedAt": null
+    },
+    {
+      "id": 6,
+      "sprintId": 2,
+      "learningOutcome": 1,
+      "assessment": "-",
+      "notes": null,
+      "evaluatedAt": "2026-09-29"
+    },
+    {
+      "id": 7,
+      "sprintId": 2,
+      "learningOutcome": 2,
+      "assessment": "-",
+      "notes": null,
+      "evaluatedAt": "2026-09-29"
+    },
+    {
+      "id": 8,
+      "sprintId": 2,
+      "learningOutcome": 3,
+      "assessment": "-",
+      "notes": null,
+      "evaluatedAt": "2026-09-29"
+    },
+    {
+      "id": 9,
+      "sprintId": 2,
+      "learningOutcome": 4,
+      "assessment": "-",
+      "notes": null,
+      "evaluatedAt": "2026-09-29"
+    },
+    {
+      "id": 10,
+      "sprintId": 2,
+      "learningOutcome": 5,
+      "assessment": "-",
+      "notes": null,
+      "evaluatedAt": "2026-09-29"
     }
   ],
-  "feedbackEntries": [],
+  "feedbackEntries": [
+    {
+      "id": 1,
+      "sprintId": 2,
+      "date": "2026-09-23",
+      "fromWhom": "Bram",
+      "feedback": "Het ziet er wel donker uit",
+      "action": "Misschien kan ik een light switch maken",
+      "orderIndex": 0,
+      "createdAt": "2026-09-29T22:41:48.817Z"
+    }
+  ],
   "reflections": [
     {
       "id": 1,
@@ -449,6 +861,16 @@
       "whatChange": "",
       "createdAt": "2026-09-01 22:37:23",
       "updatedAt": "2026-09-01 22:37:23"
+    },
+    {
+      "id": 2,
+      "sprintId": 2,
+      "date": "2026-09-16",
+      "whatLearned": null,
+      "whatRetained": null,
+      "whatChange": null,
+      "createdAt": "2026-09-29T22:41:48.800Z",
+      "updatedAt": "2026-09-29T22:41:48.833Z"
     }
   ],
   "peerHelp": [],
