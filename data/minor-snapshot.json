@@ -1,9 +1,883 @@
 {
   "version": 1,
-  "generatedAt": "1970-01-01T00:00:00.000Z",
-  "contentHash": "",
-  "sprints": [],
-  "peerHelp": [],
-  "vacations": [],
-  "assets": []
+  "generatedAt": "2026-09-30T21:20:15.994Z",
+  "contentHash": "3c5e3f5d298722f442b65cc7d75465c11a1e615516e0621e2294ce11dd8b781c",
+  "sprints": [
+    {
+      "sprintNumber": "1",
+      "name": "Sprint 1",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-16",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-09-16",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "completed",
+      "stories": [
+        {
+          "storyTypeCode": "RS",
+          "storyNumber": "US 1.0",
+          "title": "Onderzoek: AI impact op IT",
+          "asA": "toekomstige IT'er",
+          "iWant": "de impact van AI op mijn werkveld onderzoeken",
+          "soThat": "ik weet welke skills en kennis ik moet hebben",
+          "learningOutcomes": [
+            1
+          ],
+          "status": "done",
+          "orderIndex": 1,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Context engineering: MCP, .md, RAG",
+              "Multi agent reviewing",
+              "Kwaliteitbewaken in CI/CD pijplijn met linters",
+              "Architectuur en diepgaande vakkennis"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [
+              {
+                "title": "Onderzoeksverslag impact van ai op de software engineer",
+                "url": "/minor/minor_55daa596-6779-4d9e-b9ea-49bee2d80257.pdf"
+              }
+            ],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Er worden minimaal 3 tools of concepten benoemd die veel software ontwikkelaars veel gebruiken",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er wordt specifiek genoemd welke veranderingen er in het werk van software ontwikkelaar plaatsvind",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Er zijn betrouwbare en recente bronnen gebruikt",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Het onderzoek is opgebouwd uit logische onderdelen",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "document",
+              "title": "Google docs",
+              "url": "https://docs.google.com/document/d/1L-sghx7zPgVDd0sfoGsfCnOFPEk7RjQKNPdLN-6bXG0/edit?tab=t.0"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "RS",
+          "storyNumber": "US 2.0",
+          "title": "Tools en concepten planning",
+          "asA": "student",
+          "iWant": "een traject voor deze minor opstellen",
+          "soThat": "weet welke tools en concepten ik wil begrijpen",
+          "learningOutcomes": [
+            5
+          ],
+          "status": "done",
+          "orderIndex": 2,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "steps",
+            "bullets": [
+              "Resultaat onderzoek",
+              "Gastles onderwerpen",
+              "Eigen interesse",
+              "Combineren van tools en concepten"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [
+              {
+                "title": "Tools en concept\nplanning",
+                "url": "/minor/minor_7508e80c-4333-43b3-a64c-f965d9b39ddc.pdf"
+              }
+            ],
+            "images": [
+              {
+                "url": "/minor/minor_64fa3988-d567-4387-a478-7d6d4c2a7c54.png",
+                "caption": "Gekozen combinatie van tools en concepten"
+              }
+            ]
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Eigen interesse in tools en concepten worden benoemd",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er worden tools en concepten geselecteerd die de student gaat bestuderen",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Concepten worden gecombineerd met tools",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Tool en concept keuze wordt onderbouwd",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "De tools en concepten uit het AI impact onderzoek worden verwerkt",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er is een onderbouwing aanwezig",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "document",
+              "title": "Tools en concepten",
+              "url": "https://docs.google.com/document/d/1L-sghx7zPgVDd0sfoGsfCnOFPEk7RjQKNPdLN-6bXG0/edit?tab=t.glg1r0jm8wyw"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 3.0",
+          "title": "Minor voortgangs- & sprinttracker",
+          "asA": "student",
+          "iWant": "wil ik mijn voortgang, taken en bewijslast per sprint kunnen bijhouden",
+          "soThat": "ik continu overzicht behoud over mijn minor en gericht kan toewerken naar mijn leerdoelen.",
+          "learningOutcomes": [
+            2,
+            4,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 3,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Brainstorm, spec driven",
+              "Antigravity, 3.8 flash",
+              "Finetunen"
+            ],
+            "websites": [
+              {
+                "title": "base.stevenheijn.nl/minor",
+                "url": "https://base.stevenheijn.nl/minor"
+              }
+            ],
+            "links": [
+              {
+                "title": "base.stevenheijn.nl/minor",
+                "url": "https://base.stevenheijn.nl/minor"
+              }
+            ],
+            "demoUrl": "https://base.stevenheijn.nl/minor",
+            "demoTitle": "base.stevenheijn.nl/minor",
+            "documents": [],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Er is een sprint- en takenbeheer (CRUD & overzicht)",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er kan bewijslast en criteria aan een story gekoppeld worden",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er kunnen reflecties, zelfevaluaties en docentfeedback per sprint vastgelegd worden",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er is een realtime voortgangsindicator van de actieve sprint en openstaande stories",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Er is een responsive interface die voldoet aan het design system op mobiel en desktop",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er is strikte autorisatie waarbij gebruikers enkel toegang hebben tot hun eigen data",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er is een maximale API-responstijd van 300ms voor data-opvragingen en wijzigingen",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er is client- en server-side invoervalidatie met duidelijke Nederlandstalige feedback",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "github",
+              "title": "S-Base",
+              "url": "https://github.com/redluee/S-Base.git"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "RS",
+          "storyNumber": "RS 4.0",
+          "title": "Opdrachtgevers zoeken voor een project",
+          "asA": "student aan de minor future-proof met ai",
+          "iWant": "relevante praktijkopdrachten werven via mijn professionele netwerk",
+          "soThat": "ik een geschikte praktijkcontext heb om geavanceerde AI-concepten toe te passen voor de minor.",
+          "learningOutcomes": [
+            1,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 4,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "PZNL migratie van CMS",
+              "Tandlab wordpress naar custom setup"
+            ],
+            "websites": [
+              {
+                "title": "LinkedIn oproep",
+                "url": "https://www.linkedin.com/posts/stevenheijn_ben-je-benieuwd-naar-wat-ai-voor-jouw-bedrijf-activity-7504257610360147968-YT8o?utm_source=share&utm_medium=member_desktop&rcm=ACoAADwQBpwB3_2k5dpPg-g_aiZ1I5hvONr49-s"
+              },
+              {
+                "title": "Tandlab",
+                "url": "https://www.tandlab.nl"
+              }
+            ],
+            "links": [
+              {
+                "title": "LinkedIn oproep",
+                "url": "https://www.linkedin.com/posts/stevenheijn_ben-je-benieuwd-naar-wat-ai-voor-jouw-bedrijf-activity-7504257610360147968-YT8o?utm_source=share&utm_medium=member_desktop&rcm=ACoAADwQBpwB3_2k5dpPg-g_aiZ1I5hvONr49-s"
+              },
+              {
+                "title": "Tandlab",
+                "url": "https://www.tandlab.nl"
+              }
+            ],
+            "demoUrl": "https://www.linkedin.com/posts/stevenheijn_ben-je-benieuwd-naar-wat-ai-voor-jouw-bedrijf-activity-7504257610360147968-YT8o?utm_source=share&utm_medium=member_desktop&rcm=ACoAADwQBpwB3_2k5dpPg-g_aiZ1I5hvONr49-s",
+            "demoTitle": "LinkedIn oproep",
+            "documents": [],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Een bericht op LinkedIn publiceren",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "In gesprek gaan met Tandlab over mogelijke projecten",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Aanbevelingen of vervolgstappen geformuleerd",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Spellingscontrolle op post uitgevoerd met behulp van AI",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "link",
+              "title": "LinkedIn oproep",
+              "url": "https://lnkd.in/p/e2BRFxXV"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "RS",
+          "storyNumber": "US 5.0",
+          "title": "Data expo ai in het werkveld",
+          "asA": "AI-innovator in opleiding",
+          "iWant": "onderzoeken hoe een evaluation harness en spec-driven development werken",
+          "soThat": "ons team de AI-oplossing onderhoudbaar en betrouwbaar kan bouwen",
+          "learningOutcomes": [
+            1,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 5,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Lezingen gevolgd (Nexis, xxllnc)",
+              "Bedrijven benaderd",
+              "Inspiratie opgedaan"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [],
+            "images": [
+              {
+                "url": "/minor/minor_e30bb9b5-8d5d-4fef-b7d5-18bafe9f6c1e.jpeg",
+                "caption": "harness engineering"
+              }
+            ]
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Architectuurschets harness",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Voorbeeld-spec driven development",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Sprintadvies",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Kennisverslag",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Definition of Done gehaald",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Getest volgens acceptatiecriteria",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Code en documentatie gedocumenteerd met bewijslast",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "link",
+              "title": "Data expo",
+              "url": "https://www.data-expo.nl/"
+            }
+          ]
+        }
+      ],
+      "selfEvaluations": [
+        {
+          "learningOutcome": 1,
+          "level": "V",
+          "argumentation": "Door middel van het onderzoek dat ik heb uitgevoerd in de eerste Research story heb ik geleerd dat software ontwikkelaars in de huidige markt een aantal skills meer nodig hebben om relevant te blijven. Zoals het gebruiken van coding agents, het nauwkeurig en snel kunnen reviewen van code, omdat agents sneller nieuwe code pushen dan gereviewd kan worden. En vector databases, RAG en linters."
+        },
+        {
+          "learningOutcome": 2,
+          "level": "V",
+          "argumentation": "Ik heb een web app ontwikkeld waarin ik de voortgang van mijn minor kan bijhouden, dit is te zien op minor.stevenheijn.nl dit is gehost door middel van vercel die verbonden is met mijn github."
+        },
+        {
+          "learningOutcome": 3,
+          "level": "NV",
+          "argumentation": "Niet aan gewerkt"
+        },
+        {
+          "learningOutcome": 4,
+          "level": "V",
+          "argumentation": "Ik heb gebruik gemaakt van antigravity en gemini. Eerst de requirements van de minor app met gemini brainstorm en vervolgens antigravity aan het werk gezet voor het het schrijven van de code. "
+        },
+        {
+          "learningOutcome": 5,
+          "level": "V",
+          "argumentation": "Ik heb zelf gekozen voor antigravity en het stappenplan wat ik ben doorgaan om de app te ontwikkelen. Ook heb zelfstandig technieken gevonden die vaak worden gebruikt bij het werken met llm’s die ik wil gaan onderzoeken en gebruiken tijdens mijn minor. Ook ben ik uit mijzelf naar de data expo gegaan waar veel over ai verteld wordt hoe dit gebruikt wordt in het bedrijfsleven."
+        }
+      ],
+      "teacherAssessments": [
+        {
+          "learningOutcome": 1,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-14"
+        },
+        {
+          "learningOutcome": 2,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-14"
+        },
+        {
+          "learningOutcome": 3,
+          "assessment": "O",
+          "notes": null,
+          "evaluatedAt": "2026-09-14"
+        },
+        {
+          "learningOutcome": 4,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-14"
+        },
+        {
+          "learningOutcome": 5,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-14"
+        }
+      ],
+      "reflection": {
+        "date": "2026-09-02",
+        "whatLearned": "Ik heb geleerd hoe mijn vakgebied (software ontwikkeling) veranderd door AI. Ik moet agentic development leren. Evalueren van geschreven code is belangrijker dan ooit want ai kan gemakkelijk veel code genereren, maar het is de vraag of dit goed is.",
+        "whatRetained": "Mijn kennis in software ontwikkeling is nog meer waard, want llm's moeten vaak nog geleerd worden hoe ze kwalitatieve code kunnen schrijven. Ik moet dit goed kunnen sturen met mijn kennis.",
+        "whatChange": "De lijst volgen van technieken die ik op een rij heb gezet waarmee ik aan de slag wil gaan."
+      },
+      "feedback": [
+        {
+          "date": "2026-09-14",
+          "feedback": "Wanneer je kennis deelt kan de de student die het ontvangt misschien bevestiging geven via de mail dat hij dit heeft ontvangen.",
+          "action": "Ik ga kijken of dat dit een nuttige functie is."
+        },
+        {
+          "date": "2026-09-14",
+          "feedback": "Het ziet er wel ai gegenereerd uit",
+          "action": "Een design.md bestand maken waarin de stijl beschreven wordt"
+        }
+      ]
+    },
+    {
+      "sprintNumber": "2",
+      "name": "Sprint 2",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-30",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-09-30",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "active",
+      "stories": [
+        {
+          "storyTypeCode": "LS",
+          "storyNumber": "LS 2.0",
+          "title": "Claude code",
+          "asA": "student ai",
+          "iWant": "claude code kunnen gebruiken",
+          "soThat": "efficiënt met de beste modellen leer te werken",
+          "learningOutcomes": [
+            4
+          ],
+          "status": "done",
+          "orderIndex": 1,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Moeilijk te sturen",
+              "/ commands",
+              "claude.md",
+              "skills",
+              "agents"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Claude code geïnstalleerd",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Skill geïnstalleerd en gebruikt",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Minimaal 2 agents ontworpen",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Claude.md bestand gemaakt",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "CLAUDE.md bevat heldere, gestructureerde projectinstructies en conventies",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Agents hebben afgebakende rollen en effectieve systeem-prompts",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Prompts en skills zijn doeltreffend en herbruikbaar opgesteld",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Context en tools worden efficiënt ingezet voor nauwkeurige resultaten",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "github",
+              "title": "ontworpen agents",
+              "url": "https://github.com/redluee/tandlab-cms/tree/main/.claude/agents"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 2.0",
+          "title": "Tandlab CMS",
+          "asA": "administratief medewerker van Tandlab",
+          "iWant": "op een toegankelijke manier de content op de website kunnen aanpassen",
+          "soThat": "de website altijd up to date blijft",
+          "learningOutcomes": [
+            2,
+            4,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 2,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "steps",
+            "bullets": [
+              "Requirements brainstormen met claude",
+              "Requirements aan claude code geven",
+              "Finetunen van de website en CMS"
+            ],
+            "websites": [
+              {
+                "title": "Tandlab CMS",
+                "url": "tandlab.stevenheijn.nl"
+              }
+            ],
+            "links": [
+              {
+                "title": "Tandlab CMS",
+                "url": "tandlab.stevenheijn.nl"
+              }
+            ],
+            "demoUrl": "tandlab.stevenheijn.nl",
+            "demoTitle": "Tandlab CMS",
+            "documents": [],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "De administrator kan gemakkelijk inloggen via een aparte link om in te loggen in het systeem",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Content op de website is makkelijk inzichtelijk gemaakt zodat de administrator dit kan aanpassen",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Het project is geschreven in PHP",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Er zijn tests om de functionaliteit van de code te behouden",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Er wordt linting gebruikt om de kwaliteit en structuur van de code te behouden.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Code en documentatie gedocumenteerd met bewijslast",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "github",
+              "title": "tandlab-cms",
+              "url": "https://github.com/redluee/tandlab-cms.git"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "RS",
+          "storyNumber": "US 3.0",
+          "title": "Lokaal llm draaien",
+          "asA": "data eigenaar",
+          "iWant": "onderzoeken welke taalmodellen ik lokaal kan draaien",
+          "soThat": "gevoelige data bij mijzelf blijft",
+          "learningOutcomes": [
+            3,
+            4
+          ],
+          "status": "done",
+          "orderIndex": 3,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "LLM grootte, parameters",
+              "Preciezere instructies voor een bruikbaar resultaat",
+              "Quantisation (bit depth)"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [
+              {
+                "title": "Evaluatiekader voor Lokale Taalmodellen",
+                "url": "/minor/minor_165e535b-eea3-4007-8462-34cc03de9478.pdf"
+              }
+            ],
+            "images": [
+              {
+                "url": "/minor/minor_c92691b1-3b8a-4613-8bde-a83fb5889cfa.jpg",
+                "caption": "lokaal llm draaien"
+              }
+            ]
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Korte notitie die de privacyrisico's van servers vergelijkt met lokaal draaien.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Concreet advies over wanneer lokaal draaien nodig is.",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Data-opslag en dataminimalisatie zijn correct meegewogen",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Open-source licentie van het Hugging Face-model is gecontroleerd voor het project",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "document",
+              "title": "Evaluatiekader voor Lokale Taalmodellen.pdf",
+              "url": "/minor/minor_6c187b84-0b98-4801-9594-26e5af29e750.pdf"
+            }
+          ]
+        }
+      ],
+      "selfEvaluations": [
+        {
+          "learningOutcome": 1,
+          "level": "-",
+          "argumentation": null
+        },
+        {
+          "learningOutcome": 2,
+          "level": "V",
+          "argumentation": "Voor de klant Tandlab heb ik een custom cms met claude ontwikkeld in PHP. Ze kunnen gemakkelijk tekst en afbeeldingen veranderen op de website en onderdelen toevoegen zoals medewerkers. De klant is tevreden en heeft toegezegd om dit vrijdag 02/10/2026 over te zetten.\n- Bewijs (github): tandlab-cms (https://github.com/redluee/tandlab-cms.git)"
+        },
+        {
+          "learningOutcome": 3,
+          "level": "V",
+          "argumentation": "Ik heb een verslag geschreven waarin ik beschrijf wat de afwegingen zijn voor lokale llm's. Omdat veel bedrijven vaak gevoelige data zoals klantgegevens hebben kunnen ze deze niet zomaar met llm's meegeven, dit is niet conform AVG regelgeving. Het verslag geeft advies welk model gebruikt kan worden wanneer bepaalde taken verwacht worden van een llm."
+        },
+        {
+          "learningOutcome": 4,
+          "level": "V",
+          "argumentation": "Ik heb deze sprint gebruik gemaakt van Claude code. Om deze tool onder de knie te krijgen heb ik een aantal ingebouwde commando's leren gebruiken, daarnaast heb ik in het tandlab-cms project een claude.md bestand toegevoegd, ook heb ik skills toegevoegd en heb ik agents gemaakt.\n- Bewijs (github): ontworpen agents (https://github.com/redluee/tandlab-cms/tree/main/.claude/agents)"
+        },
+        {
+          "learningOutcome": 5,
+          "level": "V",
+          "argumentation": "Ik heb zelfstandig een klant gevonden die zelf de website wil kunnen beheren dus heb ik deze oplossing ontwikkeld. Ik ben zelfstandig aan de slag gegaan met Claude code en verschillende technieken toegepast om deze tool onder de knie te krijgen.\n- Bewijs (github): tandlab-cms (https://github.com/redluee/tandlab-cms.git)"
+        }
+      ],
+      "teacherAssessments": [
+        {
+          "learningOutcome": 1,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-09-29"
+        },
+        {
+          "learningOutcome": 2,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-29"
+        },
+        {
+          "learningOutcome": 3,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-29"
+        },
+        {
+          "learningOutcome": 4,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-29"
+        },
+        {
+          "learningOutcome": 5,
+          "assessment": "V",
+          "notes": null,
+          "evaluatedAt": "2026-09-29"
+        }
+      ],
+      "reflection": {
+        "date": "2026-09-16",
+        "whatLearned": "Dat llm's lokaal draaien best een uitdaging kan zijn, maar wel goed ",
+        "whatRetained": "De technieken die ik heb gebruikt met Claude code.",
+        "whatChange": "LLM op mijn pc draaien en vanaf mijn laptop bij."
+      },
+      "feedback": [
+        {
+          "date": "2026-09-23",
+          "feedback": "Het ziet er wel donker uit",
+          "action": "Misschien kan ik een light switch maken"
+        },
+        {
+          "date": "2026-09-30",
+          "feedback": "sterke en gebruiksvriendeljike website voor tandlab",
+          "action": "Niet nodig"
+        },
+        {
+          "date": "2026-09-30",
+          "feedback": "Ga je nog verder bij tandlab met andere werkzaamheden?",
+          "action": "Ja ik ga hierover mee in gesprek met de klant, om werkprocessen efficienter te maken."
+        },
+        {
+          "date": "2026-09-30",
+          "feedback": "Leuk dat je met een lokaal llm aan de slag bent gegaan.",
+          "action": "Dankje"
+        }
+      ]
+    }
+  ],
+  "peerHelp": [
+    {
+      "date": "2026-09-14",
+      "sprintNumber": null,
+      "description": "Advies Python\nLeer Python te gebruiken op een manier dat je onderscheid van andere die powerbi gebruiken",
+      "links": null
+    },
+    {
+      "date": "2026-09-23",
+      "sprintNumber": "2",
+      "description": "Laat je taalmodel niet het volledige excel bestand inlezen, want daardoor gaat je context heel snel vol zitten.",
+      "links": null
+    }
+  ],
+  "vacations": [
+    {
+      "name": "Herfstvakantie",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-25"
+    },
+    {
+      "name": "Kerstvakantie",
+      "startDate": "2026-12-21",
+      "endDate": "2027-01-03"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/minor/minor_165e535b-eea3-4007-8462-34cc03de9478.pdf",
+      "sha256": "985a6441aa8d1f136d1368bd8ffcc76b34dc0d6164bad99e840088e24a3ec609",
+      "size": 920140
+    },
+    {
+      "path": "public/minor/minor_55daa596-6779-4d9e-b9ea-49bee2d80257.pdf",
+      "sha256": "02dbb6fb2361068124c8e6ad1c78e1d3f69523655d3d88bb66cc37041a6ba81b",
+      "size": 659695
+    },
+    {
+      "path": "public/minor/minor_64fa3988-d567-4387-a478-7d6d4c2a7c54.png",
+      "sha256": "61ba0a4f5f71a6d0e001b5e34673624af2d45a089687dac5934e5291b76598cd",
+      "size": 51307
+    },
+    {
+      "path": "public/minor/minor_6c187b84-0b98-4801-9594-26e5af29e750.pdf",
+      "sha256": "985a6441aa8d1f136d1368bd8ffcc76b34dc0d6164bad99e840088e24a3ec609",
+      "size": 920140
+    },
+    {
+      "path": "public/minor/minor_7508e80c-4333-43b3-a64c-f965d9b39ddc.pdf",
+      "sha256": "b3f13cbb057d82cca642af3bbebb17aaffa9fd2498690da63e3fe8bf1dd0e927",
+      "size": 86070
+    },
+    {
+      "path": "public/minor/minor_c92691b1-3b8a-4613-8bde-a83fb5889cfa.jpg",
+      "sha256": "be84cbb88547137e5afa51d011390f9f2fef1ff915e58634ab0928e6b212a5a9",
+      "size": 354807
+    },
+    {
+      "path": "public/minor/minor_e30bb9b5-8d5d-4fef-b7d5-18bafe9f6c1e.jpeg",
+      "sha256": "d68bac2717331004b94e01972d0156e91b3d67fd8fa7d3ebeb8907a85de1b66f",
+      "size": 211859
+    }
+  ]
 }
