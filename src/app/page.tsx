@@ -1,5 +1,6 @@
 import { SprintSection, formatDate, sprintAnchor } from "@/components/sprint-section";
 import { LevelBadge } from "@/components/badges";
+import { SprintControls } from "@/components/sprint-controls";
 import { MINOR_LU_LIST, getLULabel } from "@/lib/minor-constants";
 import { loadSnapshot } from "@/lib/snapshot";
 import type { Snapshot } from "@/types/snapshot";
@@ -81,6 +82,8 @@ export default function Home() {
             </ul>
           </nav>
         )}
+
+        {sprints.length > 0 && <SprintControls />}
 
         {sprints.length === 0 ? (
           <p className="mt-16 text-center text-zinc-400">Er zijn nog geen sprints gepubliceerd.</p>

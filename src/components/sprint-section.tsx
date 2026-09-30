@@ -23,18 +23,33 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
     sprint.reflection && (sprint.reflection.whatLearned || sprint.reflection.whatRetained || sprint.reflection.whatChange);
 
   return (
-    <section id={sprintAnchor(sprint)} className="scroll-mt-28 border-t border-white/10 py-10 sm:py-14">
-      <header>
-        <p className="font-mono text-xs uppercase tracking-widest text-brand">Sprint {sprint.sprintNumber}</p>
-        <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{sprint.name}</h2>
-        <p className="mt-2 text-sm text-zinc-400">
-          {formatDate(sprint.startDate)} t/m {formatDate(sprint.endDate)}
-          {sprint.showAndGrowDate && <> · Show &amp; Grow {formatDate(sprint.showAndGrowDate)}</>}
-          {sprint.extendedDays > 0 && sprint.extensionReason && (
-            <> · verlengd met {sprint.extendedDays} dagen ({sprint.extensionReason})</>
-          )}
-        </p>
-      </header>
+    <details
+      id={sprintAnchor(sprint)}
+      data-sprint
+      className="group scroll-mt-28 border-t border-white/10 py-6 sm:py-8"
+    >
+      <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-4">
+        <header>
+          <p className="font-mono text-xs uppercase tracking-widest text-brand">Sprint {sprint.sprintNumber}</p>
+          <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{sprint.name}</h2>
+          <p className="mt-2 text-sm text-zinc-400">
+            {formatDate(sprint.startDate)} t/m {formatDate(sprint.endDate)}
+            {sprint.showAndGrowDate && <> · Show &amp; Grow {formatDate(sprint.showAndGrowDate)}</>}
+            {sprint.extendedDays > 0 && sprint.extensionReason && (
+              <> · verlengd met {sprint.extendedDays} dagen ({sprint.extensionReason})</>
+            )}
+          </p>
+          <p className="mt-2 text-xs text-zinc-500">
+            {sprint.stories.length} {sprint.stories.length === 1 ? "story" : "stories"}
+          </p>
+        </header>
+        <span
+          aria-hidden
+          className="mt-1 inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-zinc-300 transition-transform group-open:rotate-180"
+        >
+          ▾
+        </span>
+      </summary>
 
       {lus.length > 0 && (
         <div className="mt-8">
@@ -121,6 +136,6 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
           )}
         </div>
       )}
-    </section>
+    </details>
   );
 }
