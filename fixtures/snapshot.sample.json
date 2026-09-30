@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-30T12:00:00.000Z",
+  "contentHash": "sample",
+  "sprints": [
+    {
+      "sprintNumber": "1",
+      "name": "Sprint 1: Fundament",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-20",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-09-16",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "completed",
+      "stories": [
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 1.1",
+          "title": "Voorbeeldstory",
+          "asA": "student",
+          "iWant": "een voorbeeld tonen",
+          "soThat": "de layout getest kan worden",
+          "learningOutcomes": [1, 2],
+          "status": "done",
+          "orderIndex": 1,
+          "presentationData": { "summary": "Korte samenvatting", "images": [{ "url": "/minor/voorbeeld.png", "caption": "Screenshot" }] },
+          "acceptanceCriteria": [
+            { "text": "Werkt op mobiel", "isCompleted": true, "indent": 0 },
+            { "text": "Werkt op desktop", "isCompleted": false, "indent": 1 }
+          ],
+          "qualityCriteria": [{ "text": "Getest", "isCompleted": true, "indent": 0 }],
+          "evidence": [{ "type": "github", "title": "Pull request", "url": "https://github.com/example/repo/pull/1" }]
+        }
+      ],
+      "selfEvaluations": [
+        { "learningOutcome": 1, "level": "V", "argumentation": "Onderbouwing voor LU 1." },
+        { "learningOutcome": 2, "level": "NV", "argumentation": null },
+        { "learningOutcome": 3, "level": "-", "argumentation": null },
+        { "learningOutcome": 4, "level": "-", "argumentation": null },
+        { "learningOutcome": 5, "level": "-", "argumentation": null }
+      ],
+      "teacherAssessments": [{ "learningOutcome": 1, "assessment": "V", "notes": null, "evaluatedAt": null }],
+      "reflection": { "date": "2026-09-20", "whatLearned": "Veel", "whatRetained": null, "whatChange": null },
+      "feedback": [{ "date": "2026-09-16", "feedback": "Goed gedaan", "action": "Doorgaan" }]
+    }
+  ],
+  "peerHelp": [{ "date": "2026-09-10", "sprintNumber": "1", "description": "Git uitgelegd", "links": null }],
+  "vacations": [],
+  "assets": []
+}
