@@ -33,7 +33,7 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
       >
         Behaalde leeruitkomsten per sprint
       </h2>
-      <div className="mx-auto mt-4 flex w-fit max-w-full justify-center gap-2 [--cell:min(2.75rem,calc((100vw-2rem-3rem-2.25rem)/10))] sm:gap-3">
+      <div className="mx-auto mt-4 flex w-fit max-w-full justify-center gap-2 [--cell:min(2.75rem,calc((100vw-2rem-5rem-2.25rem)/10))] sm:gap-3">
         <div className="flex flex-col gap-1 sm:gap-1.5">
           <span aria-hidden className="h-6" />
           {MINOR_LU_LIST.map((lu) => (
@@ -97,6 +97,20 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
               );
             }),
           )}
+        </div>
+        <div className="flex flex-col gap-1 sm:gap-1.5">
+          <span aria-hidden className="h-6" />
+          {MINOR_LU_LIST.map((lu) => {
+            const count = columns.filter((c) => c.passed.includes(lu)).length;
+            return (
+              <span
+                key={lu}
+                className="flex h-(--cell) items-center whitespace-nowrap font-mono text-xs text-zinc-300 sm:text-sm"
+              >
+                {count}×<span className="sr-only"> behaald</span>
+              </span>
+            );
+          })}
         </div>
       </div>
     </section>
