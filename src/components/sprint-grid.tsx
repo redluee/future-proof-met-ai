@@ -15,7 +15,7 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
   });
 
   return (
-    <section aria-labelledby="lu-overview" className="mt-10">
+    <section aria-labelledby="lu-overview" className="mb-8 mt-10 sm:mb-10">
       <h2 id="lu-overview" className="font-mono text-xs uppercase tracking-widest text-zinc-400">
         Behaalde leeruitkomsten per sprint
       </h2>
