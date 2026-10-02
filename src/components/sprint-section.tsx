@@ -84,7 +84,7 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
               const linked = sprint.stories.filter((s) => s.learningOutcomes.includes(lu));
               const executed = linked.length > 0 || self?.level === "V";
               return (
-                <li key={lu} className="py-4">
+                <li key={lu} id={`${sprintAnchor(sprint)}-lu-${lu}`} className="scroll-mt-24 rounded-xl px-3 py-4 -mx-3">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="mr-2 text-base font-medium">{getLULabel(lu)}</span>
                     {executed && self && <LevelBadge level={self.level} prefix="Zelf" />}

@@ -178,6 +178,21 @@ input[type="number"] {
   }
 }
 
+@keyframes lu-highlight {
+  0%, 60% {
+    background-color: rgb(0 227 164 / 0.18);
+    box-shadow: 0 0 0 2px #00e3a4;
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 2px transparent;
+  }
+}
+
+.lu-highlight {
+  animation: lu-highlight 2.2s ease-out;
+}
+
 summary::-webkit-details-marker {
   display: none;
 }

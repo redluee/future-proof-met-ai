@@ -47,7 +47,8 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
                 return c.sprint ? (
                   <a
                     key={c.number}
-                    href={`#${sprintAnchor(c.sprint)}`}
+                    href={`#${sprintAnchor(c.sprint)}-lu-${lu}`}
+                    data-lu-link
                     aria-label={label}
                     title={label}
                     className={`${cell} hover:ring-2 hover:ring-white/60 focus-visible:ring-2 focus-visible:ring-white`}
