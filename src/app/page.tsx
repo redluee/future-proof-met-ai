@@ -1,25 +1,9 @@
-import { SprintSection, formatDate, sprintAnchor } from "@/components/sprint-section";
-import { LevelBadge } from "@/components/badges";
+import { SprintSection, formatDate } from "@/components/sprint-section";
+import { SprintGrid } from "@/components/sprint-grid";
 import { SprintControls } from "@/components/sprint-controls";
-import { MINOR_LU_LIST, getLULabel } from "@/lib/minor-constants";
 import { loadSnapshot } from "@/lib/snapshot";
-import type { Snapshot } from "@/types/snapshot";
 
 export const dynamic = "force-static";
-
-function luSummary(snapshot: Snapshot, lu: number) {
-  let passed = 0;
-  let latestSelf: "V" | "NV" | "-" = "-";
-  let latestTeacher: "V" | "O" | "-" = "-";
-  for (const sprint of snapshot.sprints) {
-    const self = sprint.selfEvaluations.find((s) => s.learningOutcome === lu);
-    const teacher = sprint.teacherAssessments.find((t) => t.learningOutcome === lu);
-    if (self && self.level !== "-") latestSelf = self.level;
-    if (teacher && teacher.assessment !== "-") latestTeacher = teacher.assessment;
-    if (self?.level === "V") passed += 1;
-  }
-  return { passed, latestSelf, latestTeacher };
-}
 
 export default function Home() {
   const snapshot = loadSnapshot();
@@ -40,48 +24,7 @@ export default function Home() {
       </header>
 
       <main className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
-        <section aria-labelledby="lu-overview" className="mt-10">
-          <h2 id="lu-overview" className="text-sm font-medium uppercase tracking-wider text-zinc-400">
-            Leeruitkomsten in één oogopslag
-          </h2>
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {MINOR_LU_LIST.map((lu) => {
-              const s = luSummary(snapshot, lu);
-              return (
-                <li key={lu} className="rounded-2xl border border-white/10 bg-zinc-900/60 p-4">
-                  <p className="text-base font-medium">{getLULabel(lu)}</p>
-                  <p className="mt-1 text-sm text-zinc-400">
-                    {s.passed === 0 ? "Nog geen sprint behaald" : `${s.passed} ${s.passed === 1 ? "sprint" : "sprints"} behaald`}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <LevelBadge level={s.latestSelf} prefix="Zelf" />
-                    {s.latestTeacher !== "-" && <LevelBadge level={s.latestTeacher} prefix="Docent" />}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-
-        {sprints.length > 0 && (
-          <nav
-            aria-label="Sprints"
-            className="sticky top-0 z-10 -mx-4 mt-10 overflow-x-auto border-b border-white/10 bg-black/90 px-4 backdrop-blur sm:-mx-6 sm:px-6 print:hidden"
-          >
-            <ul className="flex gap-2 py-2">
-              {sprints.map((sprint) => (
-                <li key={sprint.sprintNumber}>
-                  <a
-                    href={`#${sprintAnchor(sprint)}`}
-                    className="inline-flex min-h-11 min-w-11 items-center justify-center whitespace-nowrap rounded-full px-4 text-sm text-zinc-200 hover:bg-white/10 hover:text-brand"
-                  >
-                    Sprint {sprint.sprintNumber}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
+        <SprintGrid sprints={sprints} />
 
         {sprints.length > 0 && <SprintControls />}
 

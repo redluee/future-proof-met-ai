@@ -1,6 +1,8 @@
-import { getLULabel } from "@/lib/minor-constants";
+import { MINOR_LU_LIST, getLULabel } from "@/lib/minor-constants";
 import type { SnapshotSprint } from "@/types/snapshot";
 import { LevelBadge } from "./badges";
+import { LinkifiedText } from "./linkified-text";
+import { passedLearningOutcomes } from "./sprint-grid";
 import { StoryCard } from "./story-card";
 
 export function formatDate(iso: string | null | undefined): string {
@@ -15,10 +17,7 @@ export function sprintAnchor(sprint: SnapshotSprint): string {
 }
 
 export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
-  const lus = [1, 2, 3, 4, 5].filter((lu) => {
-    const self = sprint.selfEvaluations.find((s) => s.learningOutcome === lu);
-    return (self && self.level !== "-") || sprint.stories.some((s) => s.learningOutcomes.includes(lu));
-  });
+  const passed = passedLearningOutcomes(sprint);
   const hasReflection =
     sprint.reflection && (sprint.reflection.whatLearned || sprint.reflection.whatRetained || sprint.reflection.whatChange);
 
@@ -28,7 +27,7 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
       data-sprint
       className="group scroll-mt-28 border-t border-white/10 py-6 sm:py-8"
     >
-      <summary className="flex min-h-11 cursor-pointer list-none items-start justify-between gap-4">
+      <summary className="group/summary flex min-h-11 cursor-pointer list-none items-start justify-between gap-4">
         <header>
           <p className="font-mono text-xs uppercase tracking-widest text-brand">Sprint {sprint.sprintNumber}</p>
           <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{sprint.name}</h2>
@@ -42,34 +41,62 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
           <p className="mt-2 text-xs text-zinc-500">
             {sprint.stories.length} {sprint.stories.length === 1 ? "story" : "stories"}
           </p>
+          <ul aria-label="Behaalde leeruitkomsten" className="mt-3 flex flex-wrap gap-2">
+            {passed.length === 0 ? (
+              <li className="text-xs text-zinc-500">Nog geen leeruitkomsten behaald</li>
+            ) : (
+              passed.map((lu) => (
+                <li
+                  key={lu}
+                  className="inline-flex min-h-7 items-center rounded-full bg-brand/15 px-3 font-mono text-xs text-brand"
+                >
+                  {getLULabel(lu)}
+                </li>
+              ))
+            )}
+          </ul>
         </header>
-        <span
-          aria-hidden
-          className="mt-1 inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-zinc-300 transition-transform group-open:rotate-180"
-        >
-          ▾
+        <span className="mt-1 inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-white/15 px-4 text-sm text-zinc-200 transition-colors group-hover/summary:border-brand group-hover/summary:text-brand">
+          <span className="group-open:hidden">Uitklappen</span>
+          <span className="hidden group-open:inline">Inklappen</span>
+          <svg
+            aria-hidden
+            viewBox="0 0 16 16"
+            className="size-4 transition-transform group-open:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m3.5 6 4.5 4.5L12.5 6" />
+          </svg>
         </span>
       </summary>
 
-      {lus.length > 0 && (
+      {(
         <div className="mt-8">
           <h3 className="text-sm font-medium uppercase tracking-wider text-zinc-400">Leeruitkomsten</h3>
           <ul className="mt-2 divide-y divide-white/10">
-            {lus.map((lu) => {
+            {MINOR_LU_LIST.map((lu) => {
               const self = sprint.selfEvaluations.find((s) => s.learningOutcome === lu);
               const teacher = sprint.teacherAssessments.find((t) => t.learningOutcome === lu);
               const linked = sprint.stories.filter((s) => s.learningOutcomes.includes(lu));
+              const executed = linked.length > 0 || self?.level === "V";
               return (
                 <li key={lu} className="py-4">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="mr-2 text-base font-medium">{getLULabel(lu)}</span>
-                    {self && <LevelBadge level={self.level} prefix="Zelf" />}
-                    {teacher && teacher.assessment !== "-" && <LevelBadge level={teacher.assessment} prefix="Docent" />}
+                    {executed && self && <LevelBadge level={self.level} prefix="Zelf" />}
+                    {executed && teacher && teacher.assessment !== "-" && (
+                      <LevelBadge level={teacher.assessment} prefix="Docent" />
+                    )}
+                    {!executed && <span className="text-xs text-zinc-500">Niet uitgevoerd</span>}
                   </div>
-                  {self?.argumentation && (
-                    <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-zinc-300">{self.argumentation}</p>
+                  {executed && self?.argumentation && (
+                    <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-zinc-300"><LinkifiedText text={self.argumentation} /></p>
                   )}
-                  {teacher?.notes && teacher.assessment !== "-" && (
+                  {executed && teacher?.notes && teacher.assessment !== "-" && (
                     <p className="mt-2 text-sm text-zinc-400">Docent: {teacher.notes}</p>
                   )}
                   {linked.length > 0 && (

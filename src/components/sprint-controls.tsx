@@ -6,6 +6,7 @@ function sprints(): HTMLDetailsElement[] {
   return Array.from(document.querySelectorAll<HTMLDetailsElement>("details[data-sprint]"));
 }
 
+/** Opens a sprint when linked via #hash and opens all sprints for printing. Renders nothing. */
 export function SprintControls() {
   useEffect(() => {
     const openFromHash = () => {
@@ -28,17 +29,5 @@ export function SprintControls() {
     };
   }, []);
 
-  const buttonClass =
-    "inline-flex min-h-11 items-center rounded-full border border-white/10 px-4 text-sm text-zinc-200 hover:bg-white/10 hover:text-brand";
-
-  return (
-    <div className="mt-6 flex flex-wrap gap-2 print:hidden">
-      <button type="button" className={buttonClass} onClick={() => sprints().forEach((d) => (d.open = true))}>
-        Alles openen
-      </button>
-      <button type="button" className={buttonClass} onClick={() => sprints().forEach((d) => (d.open = false))}>
-        Alles sluiten
-      </button>
-    </div>
-  );
+  return null;
 }

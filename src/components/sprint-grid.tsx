@@ -1,0 +1,62 @@
+import { MINOR_LU_LIST, getLULabel } from "@/lib/minor-constants";
+import type { SnapshotSprint } from "@/types/snapshot";
+import { sprintAnchor } from "./sprint-section";
+
+const SPRINT_COUNT = 10;
+
+export function passedLearningOutcomes(sprint: SnapshotSprint): number[] {
+  return MINOR_LU_LIST.filter((lu) => sprint.selfEvaluations.some((s) => s.learningOutcome === lu && s.level === "V"));
+}
+
+export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
+  const columns = Array.from({ length: Math.max(SPRINT_COUNT, sprints.length) }, (_, i) => {
+    const sprint = sprints.find((s) => Number(s.sprintNumber) === i + 1);
+    return { number: i + 1, sprint, passed: sprint ? passedLearningOutcomes(sprint) : [] };
+  });
+
+  return (
+    <section aria-labelledby="lu-overview" className="mt-10">
+      <h2 id="lu-overview" className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+        Behaalde leeruitkomsten per sprint
+      </h2>
+      <div className="mt-4 overflow-x-auto pb-2">
+        <div
+          className="grid min-w-[34rem] gap-1.5"
+          style={{ gridTemplateColumns: `auto repeat(${columns.length}, minmax(2.75rem, 1fr))` }}
+        >
+          <span aria-hidden />
+          {columns.map((c) => (
+            <span key={c.number} className="py-1 text-center font-mono text-xs text-zinc-400">
+              S{c.number}
+            </span>
+          ))}
+          {MINOR_LU_LIST.map((lu) => (
+            <div key={lu} className="contents">
+              <span className="flex items-center pr-3 text-sm text-zinc-300">{getLULabel(lu)}</span>
+              {columns.map((c) => {
+                const passed = c.passed.includes(lu);
+                const label = `Sprint ${c.number}, ${getLULabel(lu)}: ${
+                  passed ? "behaald" : c.sprint ? "niet behaald" : "nog niet gepubliceerd"
+                }`;
+                const cell = `block h-11 rounded-md ${
+                  passed ? "bg-brand" : c.sprint ? "bg-zinc-800" : "border border-dashed border-white/10"
+                }`;
+                return c.sprint ? (
+                  <a
+                    key={c.number}
+                    href={`#${sprintAnchor(c.sprint)}`}
+                    aria-label={label}
+                    title={label}
+                    className={`${cell} hover:ring-2 hover:ring-white/60 focus-visible:ring-2 focus-visible:ring-white`}
+                  />
+                ) : (
+                  <span key={c.number} role="img" aria-label={label} className={cell} />
+                );
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
