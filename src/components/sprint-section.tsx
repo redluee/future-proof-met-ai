@@ -12,6 +12,20 @@ export function formatDate(iso: string | null | undefined): string {
   return new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
+export function formatDateTime(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  return new Intl.DateTimeFormat("nl-NL", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/Amsterdam",
+  }).format(date);
+}
+
 export function sprintAnchor(sprint: SnapshotSprint): string {
   return `sprint-${sprint.sprintNumber.replace(/[^a-z0-9]+/gi, "-")}`;
 }
