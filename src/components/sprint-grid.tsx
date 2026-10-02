@@ -19,26 +19,29 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
       <h2 id="lu-overview" className="font-mono text-xs uppercase tracking-widest text-zinc-400">
         Behaalde leeruitkomsten per sprint
       </h2>
-      <div className="mt-4 overflow-x-auto pb-2">
+      <div className="mt-4">
         <div
-          className="grid min-w-[34rem] gap-1.5"
-          style={{ gridTemplateColumns: `auto repeat(${columns.length}, minmax(2.75rem, 1fr))` }}
+          className="grid gap-1 sm:gap-1.5"
+          style={{ gridTemplateColumns: `auto repeat(${columns.length}, minmax(0, 2.75rem))` }}
         >
           <span aria-hidden />
           {columns.map((c) => (
-            <span key={c.number} className="py-1 text-center font-mono text-xs text-zinc-400">
-              S{c.number}
+            <span key={c.number} className="py-1 text-center font-mono text-[10px] text-zinc-400 sm:text-xs">
+              {c.number}
             </span>
           ))}
           {MINOR_LU_LIST.map((lu) => (
             <div key={lu} className="contents">
-              <span className="flex items-center pr-3 text-sm text-zinc-300">{getLULabel(lu)}</span>
+              <span className="flex items-center pr-2 text-xs text-zinc-300 sm:pr-3 sm:text-sm">
+                <span className="sm:hidden">LU {lu}</span>
+                <span className="hidden sm:inline">{getLULabel(lu)}</span>
+              </span>
               {columns.map((c) => {
                 const passed = c.passed.includes(lu);
                 const label = `Sprint ${c.number}, ${getLULabel(lu)}: ${
                   passed ? "behaald" : c.sprint ? "niet behaald" : "nog niet gepubliceerd"
                 }`;
-                const cell = `block h-11 rounded-md ${
+                const cell = `block aspect-square w-full rounded-sm sm:rounded-md ${
                   passed ? "bg-brand" : c.sprint ? "bg-zinc-800" : "border border-dashed border-white/10"
                 }`;
                 return c.sprint ? (
