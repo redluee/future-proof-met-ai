@@ -53,7 +53,7 @@ export default function Home() {
             width={400}
             height={400}
             priority
-            className="size-20 shrink-0 self-start rounded-[28%] object-cover sm:size-28"
+            className="size-24 shrink-0 self-start rounded-[28%] object-cover sm:size-40"
           />
         </div>
       </header>
