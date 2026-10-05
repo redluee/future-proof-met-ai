@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   SprintSection,
   formatDate,
@@ -20,28 +21,41 @@ export default function Home() {
   return (
     <>
       <header className="mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-16">
-        <p className="font-mono text-xs uppercase tracking-widest text-brand">
-          HBO-ICT Minor · Future-proof met AI
-        </p>
-        <h1 className="mt-3 font-display text-4xl leading-tight sm:text-6xl">
-          Steven Heijn
-        </h1>
-        <p className="mt-3 max-w-2xl text-base text-zinc-300">
-          Per sprint de behaalde leeruitkomsten, onderbouwd met uitgevoerde
-          stories, acceptatie- en kwaliteitscriteria en bewijsmateriaal.
-        </p>
-        {period && <p className="mt-2 text-sm text-zinc-400">{period}</p>}
-        <p className="mt-4 inline-flex min-h-7 items-center gap-2 rounded-full bg-white/5 px-3 font-mono text-xs text-zinc-300">
-          <span aria-hidden className="size-1.5 rounded-full bg-brand" />
-          Laatst bijgewerkt:{" "}
-          {snapshot.contentHash ? (
-            <time dateTime={snapshot.generatedAt}>
-              {formatDateTime(snapshot.generatedAt)}
-            </time>
-          ) : (
-            "nog niet gesynchroniseerd"
-          )}
-        </p>
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-brand">
+              HBO-ICT Minor · Future-proof met AI
+            </p>
+            <h1 className="mt-3 font-display text-4xl leading-tight sm:text-6xl">
+              Steven Heijn
+            </h1>
+            <p className="mt-3 max-w-2xl text-base text-zinc-300">
+              Per sprint de behaalde leeruitkomsten, onderbouwd met
+              uitgevoerde stories, acceptatie- en kwaliteitscriteria en
+              bewijsmateriaal.
+            </p>
+            {period && <p className="mt-2 text-sm text-zinc-400">{period}</p>}
+            <p className="mt-4 inline-flex min-h-7 items-center gap-2 rounded-full bg-white/5 px-3 font-mono text-xs text-zinc-300">
+              <span aria-hidden className="size-1.5 rounded-full bg-brand" />
+              Laatst bijgewerkt:{" "}
+              {snapshot.contentHash ? (
+                <time dateTime={snapshot.generatedAt}>
+                  {formatDateTime(snapshot.generatedAt)}
+                </time>
+              ) : (
+                "nog niet gesynchroniseerd"
+              )}
+            </p>
+          </div>
+          <Image
+            src="/profile.jpg"
+            alt="Steven Heijn"
+            width={128}
+            height={128}
+            priority
+            className="size-16 shrink-0 rounded-[28%] object-cover sm:size-32"
+          />
+        </div>
       </header>
 
       <main className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
