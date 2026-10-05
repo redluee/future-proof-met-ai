@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <header className="mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-16">
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex items-stretch justify-between gap-6">
           <div>
             <p className="font-mono text-xs uppercase tracking-widest text-brand">
               HBO-ICT Minor · Future-proof met AI
@@ -47,14 +47,16 @@ export default function Home() {
               )}
             </p>
           </div>
-          <Image
-            src="/profile.jpg"
-            alt="Steven Heijn"
-            width={128}
-            height={128}
-            priority
-            className="size-16 shrink-0 rounded-[28%] object-cover sm:size-32"
-          />
+          <div className="relative aspect-square h-auto shrink-0">
+            <Image
+              src="/profile.jpg"
+              alt="Steven Heijn"
+              fill
+              priority
+              sizes="(min-width: 640px) 320px, 180px"
+              className="rounded-[28%] object-cover"
+            />
+          </div>
         </div>
       </header>
 
