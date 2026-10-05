@@ -47,16 +47,14 @@ export default function Home() {
               )}
             </p>
           </div>
-          <div className="relative aspect-square h-auto shrink-0">
-            <Image
-              src="/profile.jpg"
-              alt="Steven Heijn"
-              fill
-              priority
-              sizes="(min-width: 640px) 320px, 180px"
-              className="rounded-[28%] object-cover"
-            />
-          </div>
+          <Image
+            src="/profile.jpg"
+            alt="Steven Heijn"
+            width={400}
+            height={400}
+            priority
+            className="h-auto w-auto shrink-0 self-stretch rounded-[28%] object-cover"
+          />
         </div>
       </header>
 
