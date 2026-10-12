@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T21:20:15.994Z",
-  "contentHash": "3c5e3f5d298722f442b65cc7d75465c11a1e615516e0621e2294ce11dd8b781c",
+  "generatedAt": "2026-10-12T22:30:22.821Z",
+  "contentHash": "59e511aea5abed90fc3ace08d4043742758d688b8d3d25e53b27f50314fb889c",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -494,7 +494,7 @@
       "showAndGrowDate": "2026-09-30",
       "extendedDays": 0,
       "extensionReason": null,
-      "status": "active",
+      "status": "completed",
       "stories": [
         {
           "storyTypeCode": "LS",
@@ -815,6 +815,246 @@
           "action": "Dankje"
         }
       ]
+    },
+    {
+      "sprintNumber": "3",
+      "name": "Sprint 3",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-14",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-10-14",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "active",
+      "stories": [
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 2.0",
+          "title": "N8N minorportfolio",
+          "asA": "student",
+          "iWant": "dat mijn ingevulde zelfevaluatie via n8n direct doorgezet wordt naar GitHub en Vercel,",
+          "soThat": "mijn resultaten meteen netjes op mijn portfolio staan.",
+          "learningOutcomes": [
+            2,
+            4,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 4,
+          "presentationData": null,
+          "acceptanceCriteria": [
+            {
+              "text": "n8n triggert automatisch bij het afronden van de zelfevaluatie.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Evaluatiedata wordt succesvol gepusht naar de GitHub-repo.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Vercel bouwt de site opnieuw en toont de resultaten correct.",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Tokens en API-keys zijn veilig opgeslagen (geen hardcoded secrets).",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "n8n vangt eventuele fouten netjes op zonder te crashen.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "De weergave op de website is responsive en overzichtelijk.",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "document",
+              "title": "Screenshot_20261005_155919.png",
+              "url": "/minor/minor_bb69836a-4939-4596-9e8a-427303681093.png"
+            },
+            {
+              "type": "app",
+              "title": "Portfolio resultaat",
+              "url": "minor.stevenheijn.nl"
+            }
+          ]
+        },
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 3.0",
+          "title": "LLM-wiki in Obsidian",
+          "asA": "student en ondernemer",
+          "iWant": "een LLM-wiki met modulaire skills inrichten in Obsidian,",
+          "soThat": "wisselende AI-modellen autonoom notities beheren binnen één vaste map.",
+          "learningOutcomes": [
+            1,
+            3,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 5,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [],
+            "websites": [
+              {
+                "title": "LLM-wiki framework",
+                "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+              }
+            ],
+            "links": [
+              {
+                "title": "LLM-wiki framework",
+                "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+              }
+            ],
+            "demoUrl": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+            "demoTitle": "LLM-wiki framework",
+            "documents": [],
+            "images": [
+              {
+                "url": "/minor/minor_51dfd9a4-74d1-4881-90b0-62485c351e66.png",
+                "caption": "Skills"
+              }
+            ]
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "index.md, schema.md en log.md functioneren conform de wiki-opzet.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Vaardigheden (skills) werken modelonafhankelijk via generieke Markdown-regels.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Twee verschillende AI-modellen kunnen succesvol notities aanmaken, linken en loggen.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Schrijfrechten zijn strikt beperkt tot de wiki-map.",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Portabiliteit: Instructies bevatten geen modelspecifieke syntax.",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Syntax: Strikt valide YAML-frontmatter en werkende [[wikilinks]].",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Traceerbaarheid: Elke AI-wijziging staat gelogd met datum/tijd in log.md.",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "github",
+              "title": "LLM-wiki",
+              "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+            }
+          ]
+        }
+      ],
+      "selfEvaluations": [
+        {
+          "learningOutcome": 1,
+          "level": "V",
+          "argumentation": "Ik heb ai ingebouwd in mijn bestaande obsidian vault om voorbereid te zijn op mijn toekomstige werk"
+        },
+        {
+          "learningOutcome": 2,
+          "level": "V",
+          "argumentation": "Ik heb N8N draaiend op mijn private server en deze triggert wanneer ik de zelfevaluatie invul.\n- Bewijs (app): Portfolio resultaat (minor.stevenheijn.nl)"
+        },
+        {
+          "learningOutcome": 3,
+          "level": "V",
+          "argumentation": "Ik heb het AI-gebruik in mijn tweede brein bewust verantwoord ingericht: schrijfrechten alleen in de wiki-map, alles gelogd in log.md (transparantie) en mijn persoonlijke notities staan lokaal in mijn eigen vault (privacy)."
+        },
+        {
+          "learningOutcome": 4,
+          "level": "V",
+          "argumentation": "Ik heb N8N, Obsidian in combinatie met claude code en skills gebruikt."
+        },
+        {
+          "learningOutcome": 5,
+          "level": "V",
+          "argumentation": "Ik heb een eigen tweede brein in Obsidian gebouwd waarin AI-modellen via skills notities beheren, met beperkte schrijfrechten en logging zodat ik de controle houd"
+        }
+      ],
+      "teacherAssessments": [
+        {
+          "learningOutcome": 1,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-10-12"
+        },
+        {
+          "learningOutcome": 2,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-10-12"
+        },
+        {
+          "learningOutcome": 3,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-10-12"
+        },
+        {
+          "learningOutcome": 4,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-10-12"
+        },
+        {
+          "learningOutcome": 5,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": "2026-10-12"
+        }
+      ],
+      "reflection": {
+        "date": "2026-09-23",
+        "whatLearned": null,
+        "whatRetained": null,
+        "whatChange": null
+      },
+      "feedback": [
+        {
+          "date": "2026-10-07",
+          "feedback": "Ik denk dat je al best ver bent, ziet er netjes uit",
+          "action": "verder gaan"
+        },
+        {
+          "date": "2026-10-12",
+          "feedback": "Ziet er interessant uit, ga door.",
+          "action": "."
+        }
+      ]
     }
   ],
   "peerHelp": [
@@ -828,6 +1068,24 @@
       "date": "2026-09-23",
       "sprintNumber": "2",
       "description": "Laat je taalmodel niet het volledige excel bestand inlezen, want daardoor gaat je context heel snel vol zitten.",
+      "links": null
+    },
+    {
+      "date": "2026-09-30",
+      "sprintNumber": "3",
+      "description": "Je kan ook gemini gebruiken in plaats van de openrouter node in make.com zoals in de eerste make.com opdracht",
+      "links": null
+    },
+    {
+      "date": "2026-10-12",
+      "sprintNumber": "3",
+      "description": "De captions die gegenereerd worden zullen waarschijnlijk veel op elkaar gaan lijken want de fotos op de post lijken ook veel op elkaar. Maak een system prompt die naar specifieke details kijkt of vraagt. Of zorg voor een slider een de kant van de gebruiker.",
+      "links": null
+    },
+    {
+      "date": "2026-10-12",
+      "sprintNumber": "3",
+      "description": "Zorg ervoor dat gebruikers de progressie zien van wat ai aan het doen is op de achtergrond en sla de data op in een database",
       "links": null
     }
   ],
@@ -850,6 +1108,11 @@
       "size": 920140
     },
     {
+      "path": "public/minor/minor_51dfd9a4-74d1-4881-90b0-62485c351e66.png",
+      "sha256": "50b86732ec67b0f494284614c0d129e93fa93e00a38f1e36afd92469f4cc4e46",
+      "size": 27040
+    },
+    {
       "path": "public/minor/minor_55daa596-6779-4d9e-b9ea-49bee2d80257.pdf",
       "sha256": "02dbb6fb2361068124c8e6ad1c78e1d3f69523655d3d88bb66cc37041a6ba81b",
       "size": 659695
@@ -868,6 +1131,11 @@
       "path": "public/minor/minor_7508e80c-4333-43b3-a64c-f965d9b39ddc.pdf",
       "sha256": "b3f13cbb057d82cca642af3bbebb17aaffa9fd2498690da63e3fe8bf1dd0e927",
       "size": 86070
+    },
+    {
+      "path": "public/minor/minor_bb69836a-4939-4596-9e8a-427303681093.png",
+      "sha256": "b3d5879cce399cbccd729439535b67a922759bbc170e940984059b1b05f06ec1",
+      "size": 69344
     },
     {
       "path": "public/minor/minor_c92691b1-3b8a-4613-8bde-a83fb5889cfa.jpg",
