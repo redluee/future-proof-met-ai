@@ -1,4 +1,5 @@
-const URL_PATTERN = /((?:https?:\/\/|www\.)[^\s<>"']+)/gi;
+const BARE_DOMAIN = "(?:[a-z0-9-]+\\.)+(?:nl|com|org|net|io|dev|app|eu|be|de)\\b(?:\\/[^\\s<>\"']*)?";
+const URL_PATTERN = new RegExp(`((?:https?:\\/\\/|www\\.)[^\\s<>"']+|(?<![\\w@./-])${BARE_DOMAIN})`, "gi");
 const TRAILING_PUNCTUATION = /[.,;:!?)\]}]+$/;
 
 export function LinkifiedText({ text }: { text: string }) {
@@ -9,7 +10,7 @@ export function LinkifiedText({ text }: { text: string }) {
         if (i % 2 === 0) return part;
         const trailing = part.match(TRAILING_PUNCTUATION)?.[0] ?? "";
         const url = trailing ? part.slice(0, -trailing.length) : part;
-        const href = url.toLowerCase().startsWith("www.") ? `https://${url}` : url;
+        const href = /^https?:\/\//i.test(url) ? url : `https://${url}`;
         return (
           <span key={i}>
             <a
