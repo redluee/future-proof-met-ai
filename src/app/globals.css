@@ -23,13 +23,13 @@
 }
 
 @theme inline {
-  --color-background: #000;
-  --color-foreground: #fff;
-  --color-brand: #00e3a4;
-  --color-brand-hover: #03f5b0;
-  --color-brand-active: #005f4e;
+  --color-background: var(--page-bg);
+  --color-foreground: var(--page-fg);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-active: var(--brand-active);
   --color-muted: #a1a1aa;
-  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border: var(--page-border);
   --font-sans: 'epilogue', sans-serif;
   --font-display: 'oatmeal', serif;
   --font-mono: 'jetbrains-mono', monospace;
@@ -73,6 +73,50 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/*
+ * Theme. Dark is the default design, `.light` flips it. The markup uses the
+ * dark palette (text-white, zinc-*, white/10 ...), so the light theme remaps
+ * those palette variables instead of touching every component. Both themes are
+ * set explicitly because the wave overlays put a `.dark` wrapper inside a
+ * `.light` page and the other way around.
+ */
+:root,
+.dark {
+  color-scheme: dark;
+  --page-bg: #000;
+  --page-fg: #fff;
+  --page-border: rgba(255, 255, 255, 0.2);
+  --brand: #00e3a4;
+  --brand-hover: #03f5b0;
+  --brand-active: #005f4e;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+}
+
+.light {
+  color-scheme: light;
+  --page-bg: #fff;
+  --page-fg: #000;
+  --page-border: rgba(0, 0, 0, 0.2);
+  --brand: #00805d;
+  --brand-hover: #006247;
+  --brand-active: #00e3a4;
+  --color-white: #000;
+  --color-black: #fff;
+  --color-zinc-200: #27272a;
+  --color-zinc-300: #3f3f46;
+  --color-zinc-400: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-800: #e4e4e7;
+  --color-zinc-900: #f4f4f5;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -85,7 +129,7 @@ body {
 
 ::selection {
   background: var(--color-brand);
-  color: #000;
+  color: var(--page-bg);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -193,11 +237,93 @@ input[type="number"] {
   animation: lu-highlight 2.2s ease-out;
 }
 
+/* Theme wave: a clone of the page in the target theme, revealed by a growing circle (see theme-toggle.tsx). */
+.theme-wave {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--page-bg);
+  color: var(--page-fg);
+}
+
+.theme-wave-page {
+  position: absolute;
+  inset: 0 0 auto 0;
+  will-change: transform;
+}
+
+.theme-toggle {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--toggle-border);
+  border-radius: 9999px;
+  background: var(--toggle-bg);
+  color: var(--toggle-fg);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition:
+    transform 160ms ease-out,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+}
+
+/* The button follows the theme that is being switched to, not the one still painted under the wave. */
+html[data-theme-target="dark"] .theme-toggle {
+  --toggle-bg: rgb(24 24 27 / 0.8);
+  --toggle-fg: #fff;
+  --toggle-border: rgb(255 255 255 / 0.2);
+}
+
+html[data-theme-target="light"] .theme-toggle {
+  --toggle-bg: rgb(255 255 255 / 0.8);
+  --toggle-fg: #09090b;
+  --toggle-border: rgb(0 0 0 / 0.2);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+  grid-area: 1 / 1;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    filter 200ms ease;
+}
+
+/* Dark shows the sun (switch to light), light shows the moon. */
+html[data-theme-target="dark"] .theme-toggle-moon,
+html[data-theme-target="light"] .theme-toggle-sun {
+  opacity: 0;
+  transform: rotate(-60deg) scale(0.6);
+  filter: blur(2px);
+}
+
 summary::-webkit-details-marker {
   display: none;
 }
 
 @media print {
+  .theme-toggle,
+  .theme-wave {
+    display: none;
+  }
   body {
     background: #fff;
     color: #000;
