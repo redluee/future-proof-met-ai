@@ -6,7 +6,7 @@ import { useSyncExternalStore } from "react";
 type Theme = "dark" | "light";
 
 const STORAGE_KEY = "theme";
-const WAVE_MS = 800;
+const WAVE_MS = 1600;
 const WAVE_EASING = "cubic-bezier(0.32, 0.72, 0, 1)";
 
 /**
