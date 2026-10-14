@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T08:59:05.192Z",
-  "contentHash": "56dcc8139286efa784d71b6dab2d046d747f68dd28dae1d3289358b6b4a2bac6",
+  "generatedAt": "2026-10-14T11:09:09.621Z",
+  "contentHash": "78d2dec12981852393f5fdad8fd23a35fb039d622021b3f939d7c335c920ef0b",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1020,7 +1020,7 @@
         },
         {
           "learningOutcome": 3,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-10-12"
         },
