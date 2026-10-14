@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T11:09:09.621Z",
-  "contentHash": "78d2dec12981852393f5fdad8fd23a35fb039d622021b3f939d7c335c920ef0b",
+  "generatedAt": "2026-10-14T11:57:33.090Z",
+  "contentHash": "0fa2b95e4aca9333d3415c55cada715fc6eb07e4ae9b0b1384a8e5dad33e9ff3",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1039,9 +1039,9 @@
       ],
       "reflection": {
         "date": "2026-09-23",
-        "whatLearned": null,
-        "whatRetained": null,
-        "whatChange": null
+        "whatLearned": "Hoe een tweede brein met een taalmodel samengevoegd kan worden tot een schaalbaar geheugen en context.",
+        "whatRetained": "Ik zal blijven doorgaan met het maken van notities en brainstormen met AI die in de vault kan lezen\nIk zal ook de nieuwspagina blijven gebruiken, want het scheelt enorm veel tijd.",
+        "whatChange": "Mogeljik mijn nieuwspagina ombouwen om ervoor te zorgen dat ik kan aangeven wat mij interesseert en wat niet, voor betere resultaten."
       },
       "feedback": [
         {
