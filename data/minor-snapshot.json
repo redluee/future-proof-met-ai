@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T22:30:22.821Z",
-  "contentHash": "59e511aea5abed90fc3ace08d4043742758d688b8d3d25e53b27f50314fb889c",
+  "generatedAt": "2026-10-14T08:59:05.192Z",
+  "contentHash": "56dcc8139286efa784d71b6dab2d046d747f68dd28dae1d3289358b6b4a2bac6",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1008,13 +1008,13 @@
       "teacherAssessments": [
         {
           "learningOutcome": 1,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-10-12"
         },
         {
           "learningOutcome": 2,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-10-12"
         },
@@ -1026,13 +1026,13 @@
         },
         {
           "learningOutcome": 4,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-10-12"
         },
         {
           "learningOutcome": 5,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-10-12"
         }
@@ -1053,6 +1053,11 @@
           "date": "2026-10-12",
           "feedback": "Ziet er interessant uit, ga door.",
           "action": "."
+        },
+        {
+          "date": "2026-10-14",
+          "feedback": "Ik heb meestal dat het heel leuk is zo een tool maar dat ik het nooit lees.",
+          "action": "Ik gebruik het nu een week en vind het heel nuttig."
         }
       ]
     }
