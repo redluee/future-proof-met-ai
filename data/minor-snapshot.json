@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T11:57:33.090Z",
-  "contentHash": "0fa2b95e4aca9333d3415c55cada715fc6eb07e4ae9b0b1384a8e5dad33e9ff3",
+  "generatedAt": "2026-10-14T11:58:47.280Z",
+  "contentHash": "77694b7d903b25bcf8bf533e0830da3dbf619b51adcb9f424bbb536c070a322f",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -732,7 +732,7 @@
         {
           "learningOutcome": 1,
           "level": "-",
-          "argumentation": null
+          "argumentation": "Niet aan gewerkt"
         },
         {
           "learningOutcome": 2,
