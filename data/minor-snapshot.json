@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T11:58:47.280Z",
-  "contentHash": "77694b7d903b25bcf8bf533e0830da3dbf619b51adcb9f424bbb536c070a322f",
+  "generatedAt": "2026-10-15T07:00:00.686Z",
+  "contentHash": "d3111415291dfd866b8da32e9bee999ab07de168840c95260ab8a353f8676789",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -731,7 +731,7 @@
       "selfEvaluations": [
         {
           "learningOutcome": 1,
-          "level": "-",
+          "level": "NV",
           "argumentation": "Niet aan gewerkt"
         },
         {
@@ -825,7 +825,7 @@
       "showAndGrowDate": "2026-10-14",
       "extendedDays": 0,
       "extensionReason": null,
-      "status": "active",
+      "status": "completed",
       "stories": [
         {
           "storyTypeCode": "US",
