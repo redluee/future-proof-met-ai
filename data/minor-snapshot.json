@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T11:33:35.496Z",
-  "contentHash": "e5549fbdf3031947dea932f39d7526e3a67635175c73290455cd482e6aa45c83",
+  "generatedAt": "2026-10-27T11:38:26.954Z",
+  "contentHash": "d78c1fd44156342bfa79dd6c8e0aed49158f76ad1f9904653c2fe9f209a30461",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1121,6 +1121,67 @@
             }
           ],
           "evidence": []
+        },
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 2.0",
+          "title": "Iglo marknieuwspagina",
+          "asA": "Iglo-medewerker",
+          "iWant": "een centrale marktnieuwspagina bekijken",
+          "soThat": "ik tijd bespaar op het handmatig zoeken naar nieuws",
+          "learningOutcomes": [
+            2,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 2,
+          "presentationData": null,
+          "acceptanceCriteria": [
+            {
+              "text": "De pagina toont actueel marktnieuws uit alle relevante bronnen op één plek.",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Berichten bevatten minimaal een kop, bronvermelding, datum en link naar het origineel.",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Nieuwe artikelen worden elke 2 weken ingeladen zonder handmatige invoer.",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "De pagina laadt binnen 2 seconden.",
+              "isCompleted": false,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Direct bereikbaar via de browser voor iedereen met een account.",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Geen dubbele artikelen op het overzicht.",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Nieuwe bronnen zijn binnen 5 minuten toe te voegen via de configuratie.",
+              "isCompleted": false,
+              "indent": 0
+            }
+          ],
+          "evidence": [
+            {
+              "type": "document",
+              "title": "Screenshot_20261027_123633.png",
+              "url": "/minor/minor_8d843efc-3d47-4aa8-969b-8c3d0cb2d665.png"
+            }
+          ]
         }
       ],
       "selfEvaluations": [
@@ -1131,7 +1192,7 @@
         },
         {
           "learningOutcome": 2,
-          "level": "-",
+          "level": "V",
           "argumentation": null
         },
         {
@@ -1265,6 +1326,11 @@
       "path": "public/minor/minor_7508e80c-4333-43b3-a64c-f965d9b39ddc.pdf",
       "sha256": "b3f13cbb057d82cca642af3bbebb17aaffa9fd2498690da63e3fe8bf1dd0e927",
       "size": 86070
+    },
+    {
+      "path": "public/minor/minor_8d843efc-3d47-4aa8-969b-8c3d0cb2d665.png",
+      "sha256": "c0e017f46216495a45cad52b11dbfa625ca85cdb99bc167a2f12cf3593b8c32f",
+      "size": 84671
     },
     {
       "path": "public/minor/minor_bb69836a-4939-4596-9e8a-427303681093.png",
