@@ -43,8 +43,7 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
     >
       <summary className="group/summary flex min-h-11 cursor-pointer list-none items-start justify-between gap-4">
         <header>
-          <p className="font-mono text-xs uppercase tracking-widest text-brand">Sprint {sprint.sprintNumber}</p>
-          <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{sprint.name}</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">{sprint.name}</h2>
           <p className="mt-2 text-sm text-zinc-400">
             {formatDate(sprint.startDate)} t/m {formatDate(sprint.endDate)}
             {sprint.showAndGrowDate && <> · Show &amp; Grow {formatDate(sprint.showAndGrowDate)}</>}
