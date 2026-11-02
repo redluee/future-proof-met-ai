@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T18:13:19.931Z",
-  "contentHash": "339b928a3eb9c0f23d102d3af1f2a948651d246d1b111db7af07f9926c42bde9",
+  "generatedAt": "2026-11-02T18:20:10.848Z",
+  "contentHash": "462a68c0a315ac0e254cda916664c8b2e2a5182131fdb19204cf0a64fe2916cb",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1193,7 +1193,7 @@
         {
           "learningOutcome": 2,
           "level": "V",
-          "argumentation": "Iglo zoekt elke week naar nieuwtjes bij hun concurrenten binnen hun markt en "
+          "argumentation": "Iglo zoekt elke week naar nieuwtjes bij hun concurrenten binnen hun markt. Dit kost hun een halve dag per week minimaal. Ik heb een website gemaakt die automatisch op basis van zoekopdrachten en onderwerpen nieuws verzameld."
         },
         {
           "learningOutcome": 3,
