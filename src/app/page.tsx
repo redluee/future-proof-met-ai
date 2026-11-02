@@ -75,7 +75,16 @@ export default function Home() {
 
         {snapshot.peerHelp.length > 0 && (
           <section className="border-t border-white/10 py-10 sm:py-14">
-            <h2 className="text-2xl font-semibold">Kennisdeling</h2>
+            <div className="flex flex-wrap items-center gap-3">
+              <h2 className="text-2xl font-semibold">Kennisdeling</h2>
+              <span className="rounded-full bg-white/5 px-3 py-1 font-mono text-xs text-zinc-300">
+                {snapshot.peerHelp.length}{" "}
+                {snapshot.peerHelp.length === 1 ? "bijdrage" : "bijdragen"}
+              </span>
+            </div>
+            <p className="mt-2 text-xs text-zinc-400">
+              Namen zijn verborgen om privacyredenen.
+            </p>
             <ul className="mt-4 divide-y divide-white/10">
               {snapshot.peerHelp.map((p, i) => (
                 <li key={i} className="py-3 text-sm">
