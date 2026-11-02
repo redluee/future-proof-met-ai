@@ -10,12 +10,23 @@ import { loadSnapshot } from "@/lib/snapshot";
 
 export const dynamic = "force-static";
 
+function formatMonth(iso: string | null | undefined): string {
+  if (!iso) return "—";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "—";
+  return new Intl.DateTimeFormat("nl-NL", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
 export default function Home() {
   const snapshot = loadSnapshot();
   const { sprints } = snapshot;
   const period =
     sprints.length > 0
-      ? `${formatDate(sprints[0].startDate)} t/m ${formatDate(sprints[sprints.length - 1].endDate)}`
+      ? `${formatMonth(sprints[0].startDate)} t/m ${formatMonth(sprints[sprints.length - 1].endDate)}`
       : null;
 
   return (
@@ -24,15 +35,15 @@ export default function Home() {
         <div className="flex items-stretch justify-between gap-6">
           <div>
             <p className="font-mono text-xs uppercase tracking-widest text-brand">
-              HBO-ICT Minor · Future-proof met AI
+              HBO-ICT Minor · Future-proof met AI · najaar 2026
             </p>
             <h1 className="mt-3 font-display text-4xl leading-tight sm:text-6xl">
               Steven Heijn
             </h1>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
-              Per sprint de behaalde leeruitkomsten, onderbouwd met
-              uitgevoerde stories, acceptatie- en kwaliteitscriteria en
-              bewijsmateriaal.
+              Tijdens deze minor onderzoek ik hoe ik AI kan inzetten in mijn
+              werk als ICT-professional. Hier laat ik per sprint zien wat ik
+              heb gedaan, wat ik heb geleerd en welk bewijs dat onderbouwt.
             </p>
             {period && <p className="mt-2 text-sm text-zinc-400">{period}</p>}
             <p className="mt-4 inline-flex min-h-7 items-center gap-2 rounded-full bg-white/5 px-3 font-mono text-xs text-zinc-300">
