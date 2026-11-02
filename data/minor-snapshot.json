@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T17:24:55.673Z",
-  "contentHash": "ccd06c50369b412c6acb3f5d705381ac2e61e1b4ab3d8dede5a64cc3835571bb",
+  "generatedAt": "2026-11-02T18:13:19.931Z",
+  "contentHash": "339b928a3eb9c0f23d102d3af1f2a948651d246d1b111db7af07f9926c42bde9",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1193,7 +1193,7 @@
         {
           "learningOutcome": 2,
           "level": "V",
-          "argumentation": null
+          "argumentation": "Iglo zoekt elke week naar nieuwtjes bij hun concurrenten binnen hun markt en "
         },
         {
           "learningOutcome": 3,
