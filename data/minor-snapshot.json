@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T18:26:44.772Z",
-  "contentHash": "80974c58fc9153ee6ac228a638285ea369d5b80e2ec17b9611693abb4f59bb08",
+  "generatedAt": "2026-11-02T18:43:52.861Z",
+  "contentHash": "b659413a3122c00be1fb0c68fb6f2528c839f2a1c065c4513d4ef9b6d155873f",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1282,6 +1282,12 @@
       "sprintNumber": "3",
       "description": "Zorg ervoor dat gebruikers de progressie zien van wat ai aan het doen is op de achtergrond en sla de data op in een database",
       "links": null
+    },
+    {
+      "date": "2026-11-02",
+      "sprintNumber": "4",
+      "description": "Getipt om tailscale te gebruiken zodat hij gemakkelijk zijn eigen apps niet extern hoeft te hosten maar altijd toegankelijk te houden met beperkte beveiligsrisico's",
+      "links": "https://github.com/tailscale/tailscale"
     }
   ],
   "vacations": [
