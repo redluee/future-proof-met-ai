@@ -51,9 +51,6 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
               <> · verlengd met {sprint.extendedDays} dagen ({sprint.extensionReason})</>
             )}
           </p>
-          <p className="mt-2 text-xs text-zinc-500">
-            {sprint.stories.length} {sprint.stories.length === 1 ? "story" : "stories"}
-          </p>
           <ul aria-label="Behaalde leeruitkomsten" className="mt-3 flex flex-wrap gap-2">
             {passed.length === 0 ? (
               <li className="text-xs text-zinc-500">Nog geen leeruitkomsten behaald</li>
@@ -63,7 +60,7 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
                   key={lu}
                   className="inline-flex min-h-7 items-center rounded-full bg-brand/15 px-3 font-mono text-xs text-brand"
                 >
-                  {getLULabel(lu)}
+                  LU{lu}
                 </li>
               ))
             )}
@@ -127,7 +124,7 @@ export function SprintSection({ sprint }: { sprint: SnapshotSprint }) {
       {sprint.stories.length > 0 && (
         <div className="mt-8">
           <h3 className="text-sm font-medium uppercase tracking-wider text-zinc-400">
-            Uitgevoerde stories ({sprint.stories.length})
+            Uitgevoerde stories
           </h3>
           <div className="mt-3 grid gap-4 lg:grid-cols-2">
             {sprint.stories.map((story, i) => (

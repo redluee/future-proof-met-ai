@@ -10,7 +10,7 @@ export const MINOR_LU_LIST = [1, 2, 3, 4, 5] as const;
 
 export function getLULabel(lu: number): string {
   const desc = MINOR_LU_DESCRIPTIONS[lu];
-  return desc ? `LU ${lu} · ${desc}` : `LU ${lu}`;
+  return desc ? `${desc} · LU ${lu}` : `LU ${lu}`;
 }
 
 export function isImageUrl(url: string | null | undefined): boolean {
