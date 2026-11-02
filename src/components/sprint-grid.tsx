@@ -13,6 +13,10 @@ export function passedLearningOutcomes(sprint: SnapshotSprint): number[] {
 }
 
 export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
+  const totalPassed = sprints.reduce(
+    (total, sprint) => total + passedLearningOutcomes(sprint).length,
+    0,
+  );
   const columns = Array.from(
     { length: Math.max(SPRINT_COUNT, sprints.length) },
     (_, i) => {
@@ -27,12 +31,20 @@ export function SprintGrid({ sprints }: { sprints: SnapshotSprint[] }) {
 
   return (
     <section aria-labelledby="lu-overview" className="mb-8 mt-10 sm:mb-10">
-      <h2
-        id="lu-overview"
-        className="font-mono text-xs uppercase tracking-widest text-zinc-400"
-      >
-        Behaalde leeruitkomsten per sprint
-      </h2>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h2
+          id="lu-overview"
+          className="font-mono text-xs uppercase tracking-widest text-zinc-400"
+        >
+          Behaalde leeruitkomsten per sprint
+        </h2>
+        <p className="flex items-baseline gap-2 text-sm text-zinc-300">
+          <span className="font-mono text-2xl font-semibold tabular-nums text-brand">
+            {totalPassed}
+          </span>
+          totaal behaald
+        </p>
+      </div>
       <div className="mx-auto mt-4 flex w-fit max-w-full justify-center gap-2 [--cell:min(2.75rem,calc((100vw-2rem-5rem-2.25rem)/10))] sm:gap-3">
         <div className="flex flex-col gap-1 sm:gap-1.5">
           <span aria-hidden className="h-6" />
