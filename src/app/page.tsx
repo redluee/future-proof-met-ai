@@ -42,7 +42,7 @@ export default function Home() {
             </h1>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Tijdens deze minor onderzoek ik hoe ik AI kan inzetten in mijn
-              werk als ICT-professional. Hier laat ik per sprint zien wat ik
+              werk als software engineer. Hier laat ik per sprint zien wat ik
               heb gedaan, wat ik heb geleerd en welk bewijs dat onderbouwt.
             </p>
             {period && <p className="mt-2 text-sm text-zinc-400">{period}</p>}
