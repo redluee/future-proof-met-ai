@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T08:00:00.703Z",
-  "contentHash": "269caa573448b1bb7c1da8791ee93d8126bc80b22f2f2281c06f0bd71d2f99df",
+  "generatedAt": "2026-11-02T17:24:55.673Z",
+  "contentHash": "ccd06c50369b412c6acb3f5d705381ac2e61e1b4ab3d8dede5a64cc3835571bb",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1216,31 +1216,31 @@
           "learningOutcome": 1,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-02"
         },
         {
           "learningOutcome": 2,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-02"
         },
         {
           "learningOutcome": 3,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-02"
         },
         {
           "learningOutcome": 4,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-02"
         },
         {
           "learningOutcome": 5,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-02"
         }
       ],
       "reflection": {
