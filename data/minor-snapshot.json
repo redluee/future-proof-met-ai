@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T18:43:52.861Z",
-  "contentHash": "b659413a3122c00be1fb0c68fb6f2528c839f2a1c065c4513d4ef9b6d155873f",
+  "generatedAt": "2026-11-04T09:39:06.961Z",
+  "contentHash": "5fc9dc0b67a44732b9f4d2a0aae0f1c4cfa2f9c3afeb3af181fb0ecdd1937a89",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1220,7 +1220,7 @@
         },
         {
           "learningOutcome": 2,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-02"
         },
@@ -1232,13 +1232,13 @@
         },
         {
           "learningOutcome": 4,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-02"
         },
         {
           "learningOutcome": 5,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-02"
         }
@@ -1249,7 +1249,13 @@
         "whatRetained": null,
         "whatChange": null
       },
-      "feedback": []
+      "feedback": [
+        {
+          "date": "2026-11-04",
+          "feedback": "N8N werkt goed, goed dat je met codex aan de slag bent gegaan.",
+          "action": "Niks"
+        }
+      ]
     }
   ],
   "peerHelp": [
