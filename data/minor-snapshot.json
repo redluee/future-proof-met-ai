@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T09:39:06.961Z",
-  "contentHash": "5fc9dc0b67a44732b9f4d2a0aae0f1c4cfa2f9c3afeb3af181fb0ecdd1937a89",
+  "generatedAt": "2026-11-05T08:00:00.716Z",
+  "contentHash": "588a1648b471d21720bc69480a4b6870c0e5f68422d3e03811f4ec6e1ff31549",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1070,7 +1070,7 @@
       "showAndGrowDate": "2026-11-04",
       "extendedDays": 7,
       "extensionReason": "Herfstvakantie",
-      "status": "active",
+      "status": "completed",
       "stories": [
         {
           "storyTypeCode": "LS",
