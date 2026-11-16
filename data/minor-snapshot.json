@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T08:00:00.716Z",
-  "contentHash": "588a1648b471d21720bc69480a4b6870c0e5f68422d3e03811f4ec6e1ff31549",
+  "generatedAt": "2026-11-16T09:07:47.687Z",
+  "contentHash": "97cb484578b91dd8b51789c7a967c540924e5c56a530a71524522ae0222b027b",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1256,6 +1256,196 @@
           "action": "Niks"
         }
       ]
+    },
+    {
+      "sprintNumber": "5",
+      "name": "Sprint 5",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-18",
+      "durationDays": 14,
+      "showAndGrowDate": "2026-11-18",
+      "extendedDays": 0,
+      "extensionReason": null,
+      "status": "active",
+      "stories": [
+        {
+          "storyTypeCode": "US",
+          "storyNumber": "US 2.0",
+          "title": "Lescontent kwaliteitscheck met AI",
+          "asA": "content developer bij Faqta",
+          "iWant": "een geautomatiseerde controlepipeline die conceptlescontent toetst aan interne stijl- en kwaliteitsregels,",
+          "soThat": "alle lesmethoden aantoonbaar consistent zijn en exact dezelfde tone-of-voice hanteren",
+          "learningOutcomes": [
+            2,
+            4,
+            5
+          ],
+          "status": "done",
+          "orderIndex": 1,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Regel website"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [],
+            "images": []
+          },
+          "acceptanceCriteria": [
+            {
+              "text": "Werkende pipeline ingericht die conceptteksten scant op interne stijlgidsregels en tone-of-voice",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Pipeline levert per lesmodule een gestructureerd rapport met afwijkingen en concrete verbetersuggesties",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Getest en gevalideerd op representatieve Faqta-lesmodules",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Korte handleiding opgeleverd voor het zelfstandig runnen van de checks",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Gestructureerde promptarchitectuur (role, context, constraints, output format) met reproduceerbare evaluaties",
+              "isCompleted": true,
+              "indent": 0
+            },
+            {
+              "text": "Lage foutmarge: minimale false positives bij kindvriendelijk taalgebruik en streefniveaus (bijv. AVI/B1)",
+              "isCompleted": true,
+              "indent": 0
+            }
+          ],
+          "evidence": []
+        },
+        {
+          "storyTypeCode": "LS",
+          "storyNumber": "LS 1.0",
+          "title": "Lesmethodiek ethisch bewust ontwikkelen",
+          "asA": "AI-innovator bij Faqta",
+          "iWant": "de ethische risico's en kaders van AI-gegenereerde lesstof in beeld brengen",
+          "soThat": "content developers bewuste en verantwoorde leermethoden ontwikkelen voor het basisonderwijs.",
+          "learningOutcomes": [
+            3
+          ],
+          "status": "todo",
+          "orderIndex": 2,
+          "presentationData": null,
+          "acceptanceCriteria": [
+            {
+              "text": "Ethisch kader opstellen met do's and don'ts",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Deskundigenkader gedocumenteerd",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Validatiesessie gehouden met minimaal 2 content developers op basis van concrete Faqta-casussen",
+              "isCompleted": false,
+              "indent": 0
+            }
+          ],
+          "qualityCriteria": [
+            {
+              "text": "Triangulatie toegepast: wet- en regelgeving gecombineerd met wetenschappelijke bronnen en praktijkervaringen van content developers",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Volledige, betrouwbare bronvermelding (APA)",
+              "isCompleted": false,
+              "indent": 0
+            },
+            {
+              "text": "Direct toepasbaar: adviezen zijn vertaald naar werkinstructies voor de dagelijkse redactieworkflow",
+              "isCompleted": false,
+              "indent": 0
+            }
+          ],
+          "evidence": []
+        }
+      ],
+      "selfEvaluations": [
+        {
+          "learningOutcome": 1,
+          "level": "-",
+          "argumentation": null
+        },
+        {
+          "learningOutcome": 2,
+          "level": "V",
+          "argumentation": null
+        },
+        {
+          "learningOutcome": 3,
+          "level": "-",
+          "argumentation": null
+        },
+        {
+          "learningOutcome": 4,
+          "level": "V",
+          "argumentation": null
+        },
+        {
+          "learningOutcome": 5,
+          "level": "V",
+          "argumentation": null
+        }
+      ],
+      "teacherAssessments": [
+        {
+          "learningOutcome": 1,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": null
+        },
+        {
+          "learningOutcome": 2,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": null
+        },
+        {
+          "learningOutcome": 3,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": null
+        },
+        {
+          "learningOutcome": 4,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": null
+        },
+        {
+          "learningOutcome": 5,
+          "assessment": "-",
+          "notes": null,
+          "evaluatedAt": null
+        }
+      ],
+      "reflection": {
+        "date": "2026-11-04",
+        "whatLearned": null,
+        "whatRetained": null,
+        "whatChange": null
+      },
+      "feedback": []
     }
   ],
   "peerHelp": [
