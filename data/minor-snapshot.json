@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:35:56.839Z",
-  "contentHash": "70a586d7053260842b6a35148c60c13364ccc02197f6346db82a7f8ecec4ed4b",
+  "generatedAt": "2026-11-16T10:37:52.298Z",
+  "contentHash": "ef01e66f7aac0db9be2bc08b9e385f91c6c8ddb8153b8b330d2a0277e57b33db",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1188,7 +1188,7 @@
         {
           "learningOutcome": 1,
           "level": "-",
-          "argumentation": null
+          "argumentation": "nvt"
         },
         {
           "learningOutcome": 2,
