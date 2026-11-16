@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:27:41.756Z",
-  "contentHash": "cfbf8d06327e757be8f4106c27efe86b16f43345f7713e882dd8235dae4ba35a",
+  "generatedAt": "2026-11-16T10:35:56.839Z",
+  "contentHash": "70a586d7053260842b6a35148c60c13364ccc02197f6346db82a7f8ecec4ed4b",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1522,6 +1522,12 @@
       "sprintNumber": "4",
       "description": "Getipt om tailscale te gebruiken zodat hij gemakkelijk zijn eigen apps niet extern hoeft te hosten maar altijd toegankelijk te houden met beperkte beveiligsrisico's",
       "links": "https://github.com/tailscale/tailscale"
+    },
+    {
+      "date": "2026-11-16",
+      "sprintNumber": "5",
+      "description": "AI wordt steeds slimmer en heeft minder sturing nodig want het bezit de best practices van programmeren al. Test bij nieuwe modellen de kwaliteit zonder sturing van agents.md of andere .md bestanden en bepaal opnieuw welke sturing er nodig is.",
+      "links": "https://arxiv.org/pdf/2602.11988"
     }
   ],
   "vacations": [
