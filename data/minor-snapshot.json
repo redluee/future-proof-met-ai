@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:07:47.687Z",
-  "contentHash": "97cb484578b91dd8b51789c7a967c540924e5c56a530a71524522ae0222b027b",
+  "generatedAt": "2026-11-16T09:10:01.765Z",
+  "contentHash": "c8fd79a3eb57ae750a5ab29adb67085c6e45f91a10718b6a5b96733e1272ae87",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1340,7 +1340,7 @@
           "learningOutcomes": [
             3
           ],
-          "status": "todo",
+          "status": "done",
           "orderIndex": 2,
           "presentationData": null,
           "acceptanceCriteria": [
@@ -1393,7 +1393,7 @@
         },
         {
           "learningOutcome": 3,
-          "level": "-",
+          "level": "V",
           "argumentation": null
         },
         {
