@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:25:48.706Z",
-  "contentHash": "602ef5131bccbb74c1af074c8178b879e7f51a5e1566cb7ce1cb95c9d6b73f1d",
+  "generatedAt": "2026-11-16T10:26:51.752Z",
+  "contentHash": "ff9fa3128d098ee8524590b79753d3741254e992869b3a3fac9febc4d9937a4e",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1437,7 +1437,7 @@
         {
           "learningOutcome": 4,
           "level": "V",
-          "argumentation": null
+          "argumentation": "Om AI altijd op de hoogte te houden van de nieuwste schrijfregels bij Faqta heb ik een MCP server gemaakt om regels op te halen in een vast formaat uit de faqta schrijfregels website."
         },
         {
           "learningOutcome": 5,
