@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:22:03.839Z",
-  "contentHash": "98e87ebb1edf1e94ef56aedf6396a90b7bf03f1922f4c4e3be4c0684d6c3fd48",
+  "generatedAt": "2026-11-16T10:22:12.104Z",
+  "contentHash": "17995f515aa6a701e9db9d522926632c111d60962b6bf8598cc09f5a758e240d",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1421,7 +1421,7 @@
         {
           "learningOutcome": 2,
           "level": "V",
-          "argumentation": "In plaats van een presentatie in de google drive is er een centrale website gemaakt die toegankelijk is voor content ontwikkelaars en AI."
+          "argumentation": "In plaats van een presentatie in de google drive is er een centrale website gemaakt die toegankelijk is voor content ontwikkelaars en AI. https://faqta-regels.stevenheijn.nl/"
         },
         {
           "learningOutcome": 3,
