@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:10:01.765Z",
-  "contentHash": "c8fd79a3eb57ae750a5ab29adb67085c6e45f91a10718b6a5b96733e1272ae87",
+  "generatedAt": "2026-11-16T10:20:31.171Z",
+  "contentHash": "417dc353ed9565f37d496440ae89cca153cd81f4e027867c084e1760cae7786e",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1287,10 +1287,24 @@
             "layout": "auto",
             "listStyle": "bullets",
             "bullets": [
-              "Regel website"
+              "Centrale bron",
+              "Toegankelijk voor contentdevelopers en AI",
+              "Testen door contentdevelopers"
             ],
-            "websites": [],
-            "links": [],
+            "websites": [
+              {
+                "title": "Faqta schrijfregels",
+                "url": "https://faqta-regels.stevenheijn.nl/"
+              }
+            ],
+            "links": [
+              {
+                "title": "Faqta schrijfregels",
+                "url": "https://faqta-regels.stevenheijn.nl/"
+              }
+            ],
+            "demoUrl": "https://faqta-regels.stevenheijn.nl/",
+            "demoTitle": "Faqta schrijfregels",
             "documents": [],
             "images": []
           },
@@ -1342,38 +1356,56 @@
           ],
           "status": "done",
           "orderIndex": 2,
-          "presentationData": null,
+          "presentationData": {
+            "enabled": true,
+            "layout": "auto",
+            "listStyle": "bullets",
+            "bullets": [
+              "Faqta wil versnellen en automatiseren",
+              "PoC AI signaleert en adviseerd",
+              "De mens blijft verantwoordelijk"
+            ],
+            "websites": [],
+            "links": [],
+            "documents": [],
+            "images": [
+              {
+                "url": "/minor/minor_9e1edba3-8fad-415b-a282-f1ef79f3e1c3.png",
+                "caption": "grens-voor-ai-bij-lesmethodiek"
+              }
+            ]
+          },
           "acceptanceCriteria": [
             {
               "text": "Ethisch kader opstellen met do's and don'ts",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             },
             {
               "text": "Deskundigenkader gedocumenteerd",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             },
             {
               "text": "Validatiesessie gehouden met minimaal 2 content developers op basis van concrete Faqta-casussen",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             }
           ],
           "qualityCriteria": [
             {
               "text": "Triangulatie toegepast: wet- en regelgeving gecombineerd met wetenschappelijke bronnen en praktijkervaringen van content developers",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             },
             {
               "text": "Volledige, betrouwbare bronvermelding (APA)",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             },
             {
               "text": "Direct toepasbaar: adviezen zijn vertaald naar werkinstructies voor de dagelijkse redactieworkflow",
-              "isCompleted": false,
+              "isCompleted": true,
               "indent": 0
             }
           ],
@@ -1412,31 +1444,31 @@
           "learningOutcome": 1,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 2,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 3,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 4,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 5,
           "assessment": "-",
           "notes": null,
-          "evaluatedAt": null
+          "evaluatedAt": "2026-11-16"
         }
       ],
       "reflection": {
@@ -1533,6 +1565,11 @@
       "path": "public/minor/minor_8d843efc-3d47-4aa8-969b-8c3d0cb2d665.png",
       "sha256": "c0e017f46216495a45cad52b11dbfa625ca85cdb99bc167a2f12cf3593b8c32f",
       "size": 84671
+    },
+    {
+      "path": "public/minor/minor_9e1edba3-8fad-415b-a282-f1ef79f3e1c3.png",
+      "sha256": "3a97484efdb60a6ba23ae7c96675060d21bab56fa7511c0913abea8c682ed91b",
+      "size": 82118
     },
     {
       "path": "public/minor/minor_bb69836a-4939-4596-9e8a-427303681093.png",
