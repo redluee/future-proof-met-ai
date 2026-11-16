@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:38:21.391Z",
-  "contentHash": "d0b1b7296459368c086ffc914ccb1b955e3101165583c941ab6d3f808b2a4ec5",
+  "generatedAt": "2026-11-16T10:44:49.481Z",
+  "contentHash": "93dfd3a722eaf651d25c676273ad4732cb07d29b8355e3539f71e69612813988",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1245,9 +1245,9 @@
       ],
       "reflection": {
         "date": "2026-10-12",
-        "whatLearned": null,
-        "whatRetained": null,
-        "whatChange": null
+        "whatLearned": "Chatgpt is erg uitgebreid met het neerzetten van tekst in de applicatie over de werking van een functie. De app komt daardoor vol te staan met onnodige tekst. Daarnaast blijkt Chatgpt meer modellen voor specifieke doeleinden te hebben.",
+        "whatRetained": "Kennis over wisseling tussen taalmodellen, dit gaat minder soepel wanneer je ook van harness wisselt, wat automatisch moet door abonnementen te gebruiken in plaats van de API in een zelf gekozen harness.",
+        "whatChange": "Terug naar Claude code"
       },
       "feedback": [
         {
