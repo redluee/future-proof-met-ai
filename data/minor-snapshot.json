@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:45:57.701Z",
-  "contentHash": "b599fe1ee9e9cefbae4326e14c7c87fda79cebfb0d91073ca3efc154c2e099d4",
+  "generatedAt": "2026-11-18T09:24:06.367Z",
+  "contentHash": "4ca5f932fd9b7283a27bbeed4796800fe30aebfd49fc1726f4243d1deb8fc69f",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1454,34 +1454,34 @@
         },
         {
           "learningOutcome": 2,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 3,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 4,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-16"
         },
         {
           "learningOutcome": 5,
-          "assessment": "-",
+          "assessment": "V",
           "notes": null,
           "evaluatedAt": "2026-11-16"
         }
       ],
       "reflection": {
         "date": "2026-11-04",
-        "whatLearned": null,
-        "whatRetained": null,
-        "whatChange": null
+        "whatLearned": "Dat AI content controles kan doen maar pas goeie resultaten geeft wanneer de regel beschrijving concreet is.",
+        "whatRetained": "Mijn manier van het verzamelen van kennis in notities. Alle notities van meetings, bevindingen, stappen van het project etcetera.",
+        "whatChange": "Meer focussen op de kwaliteit van de regels bij een controle door middel van AI. Meer sturen wat de verwachten output vorm is en toegankelijkheid ervan bepalen."
       },
       "feedback": []
     }
