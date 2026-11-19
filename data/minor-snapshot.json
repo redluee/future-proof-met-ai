@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-18T09:24:06.367Z",
-  "contentHash": "4ca5f932fd9b7283a27bbeed4796800fe30aebfd49fc1726f4243d1deb8fc69f",
+  "generatedAt": "2026-11-19T08:00:02.041Z",
+  "contentHash": "7d9cd5f5d26ac32c43c497eee4bf914f647f1b8df9684e48801d83b0981dc017",
   "sprints": [
     {
       "sprintNumber": "1",
@@ -1266,7 +1266,7 @@
       "showAndGrowDate": "2026-11-18",
       "extendedDays": 0,
       "extensionReason": null,
-      "status": "active",
+      "status": "completed",
       "stories": [
         {
           "storyTypeCode": "US",
